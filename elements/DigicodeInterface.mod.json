@@ -1,0 +1,408 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 182,
+    "height": 160,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": true,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "codegreen.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScreenGreen"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "codered.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScreenRed"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code4.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen5Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code3.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen4Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code2.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen3Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen2Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScreenShower"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton1Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 139,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton2Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton3Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 256,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton4Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 139,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton5Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton6Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 256,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_7",
+          "text": "7",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton7Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 139,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_8",
+          "text": "8",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton8Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_9",
+          "text": "9",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton9Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 256,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_0",
+          "text": "0",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton0Clicked"
+          },
+          "displayCondition": {
+            "name": "ShowButtons"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_buttonv",
+          "image": "buttonv.png",
+          "hoveredImage": "buttonv2.png",
+          "onClick": {
+            "name": "OnButtonVClicked"
+          },
+          "x": 256,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_buttonx",
+          "image": "buttonx.png",
+          "hoveredImage": "buttonx2.png",
+          "onClick": {
+            "name": "OnButtonXClicked"
+          },
+          "x": 139,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark0.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark1.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 83
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark2.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 83
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark3.png",
+          "use1Xscale": false,
+          "x": 256,
+          "y": 83
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark4.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 110
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark5.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 110
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark6.png",
+          "use1Xscale": false,
+          "x": 256,
+          "y": 110
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark7.png",
+          "use1Xscale": false,
+          "x": 139,
+          "y": 137
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark8.png",
+          "use1Xscale": false,
+          "x": 202,
+          "y": 137
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "dark9.png",
+          "use1Xscale": false,
+          "x": 256,
+          "y": 137
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "DigicodeInterfaceThisGUIIsClosed"
+    },
+    "onClosed": {
+      "name": "DigicodeInterfaceThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 6,
+      "oy": 20,
+      "snapOnGrid": true
+    }
+  }
+}

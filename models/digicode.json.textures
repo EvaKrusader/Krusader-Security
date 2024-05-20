@@ -1,0 +1,39 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "body_front",
+        "1": "bodybuttons2"
+      },
+      "name": "default"
+    },
+    "screen1": {
+      "map": {
+        "0": "body_front1",
+        "1": "bodybuttons2"
+      },
+      "name": "screen1"
+    },
+    "screen2": {
+      "map": {
+        "0": "body_front2",
+        "1": "bodybuttons2"
+      },
+      "name": "screen2"
+    },
+    "screen3": {
+      "map": {
+        "0": "body_front3",
+        "1": "bodybuttons2"
+      },
+      "name": "screen3"
+    },
+    "screen4": {
+      "map": {
+        "0": "body_front4",
+        "1": "bodybuttons2"
+      },
+      "name": "screen4"
+    }
+  }
+}

@@ -1,0 +1,139 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 256,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Insert Username",
+          "name": "Username",
+          "width": 120,
+          "height": 20,
+          "x": 204,
+          "y": 62
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Insert Password",
+          "name": "Password",
+          "width": 120,
+          "height": 20,
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_loging.png",
+          "use1Xscale": false,
+          "x": 86,
+          "y": 37
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_reset",
+          "text": "Reset",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "PasswordResetProd"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 204,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_username",
+          "text": {
+            "fixedValue": "Username :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_password",
+          "text": {
+            "fixedValue": "Password :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_log_in",
+          "text": "Log in",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "LoginPC"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 267,
+          "y": 170
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "",
+          "name": "Core",
+          "width": 120,
+          "height": 20,
+          "x": 204,
+          "y": 134
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_core",
+          "text": {
+            "fixedValue": "Server : "
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 125
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

@@ -1,0 +1,372 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 182,
+    "height": 160,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "dev_digicode.png",
+          "use1Xscale": false,
+          "x": 123,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "codegreen.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScreenGreen"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "codered.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScreenRed"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code4.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen5Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code3.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen4Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code2.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen3Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code1.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen2Stars"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "code.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "ScreenShower"
+          },
+          "x": 130,
+          "y": 47
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton1Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 139,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton2Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton3Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 256,
+          "y": 83
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton4Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 139,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_5",
+          "text": "5",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton5Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_6",
+          "text": "6",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton6Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 256,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_7",
+          "text": "7",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton7Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 139,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_8",
+          "text": "8",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton8Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_9",
+          "text": "9",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton9Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 256,
+          "y": 137
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_0",
+          "text": "0",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "OnButton0Clicked"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 202,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_buttonv",
+          "image": "buttonv.png",
+          "hoveredImage": "buttonv2.png",
+          "onClick": {
+            "name": "OnButtonVClicked"
+          },
+          "x": 256,
+          "y": 164
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_buttonx",
+          "image": "buttonx.png",
+          "hoveredImage": "buttonx2.png",
+          "onClick": {
+            "name": "OnButtonXClicked"
+          },
+          "x": 139,
+          "y": 164
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aptitude_smartass0.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Frame1Prod"
+          },
+          "x": 346,
+          "y": 101
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aptitude_smartass1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Frame2Prod"
+          },
+          "x": 346,
+          "y": 101
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aptitude_smartass2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Frame3"
+          },
+          "x": 346,
+          "y": 101
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aptitude_smartass3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Frame4"
+          },
+          "x": 346,
+          "y": 101
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aptitude_smartass4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Frame5"
+          },
+          "x": 346,
+          "y": 101
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "aptitude_smartass5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "Frame6"
+          },
+          "x": 346,
+          "y": 101
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "DevDigicodeThisGUIIsOpened"
+    },
+    "onTick": {
+      "name": "DevDigicodeWhileThisGUIIsOpenTick"
+    },
+    "onClosed": {
+      "name": "DevDigicodeThisGUIIsClosed"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 6,
+      "oy": 20,
+      "snapOnGrid": true
+    }
+  }
+}

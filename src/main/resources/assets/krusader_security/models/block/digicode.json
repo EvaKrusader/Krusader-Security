@@ -1,0 +1,10 @@
+{
+  "parent": "krusader_security:custom/digicode",
+  "textures": {
+    "all": "krusader_security:block/body_front",
+    "particle": "krusader_security:block/body_front",
+    "0": "krusader_security:block/body_front",
+    "1": "krusader_security:block/bodybuttons2"
+  },
+  "render_type": "cutout_mipped"
+}

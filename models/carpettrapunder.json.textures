@@ -1,0 +1,25 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "carpettrap",
+        "1": "carpettrap_fire"
+      },
+      "name": "default"
+    },
+    "fire": {
+      "map": {
+        "0": "fire_animated",
+        "1": "carpet_fire_animated"
+      },
+      "name": "fire"
+    },
+    "fireblu": {
+      "map": {
+        "0": "fireblue_animated",
+        "1": "carpet_fireblu_animated"
+      },
+      "name": "fireblu"
+    }
+  }
+}

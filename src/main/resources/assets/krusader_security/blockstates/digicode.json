@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "krusader_security:block/digicode"
+    }
+  }
+}

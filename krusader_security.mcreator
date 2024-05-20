@@ -1,0 +1,1583 @@
+{
+  "mod_elements": [
+    {
+      "name": "Digicode",
+      "type": "block",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/item/digicode.json",
+          "src/main/java/net/mcreator/krusader_security/block/DigicodeBlock.java",
+          "src/main/resources/assets/krusader_security/models/block/digicode.json",
+          "src/main/resources/assets/krusader_security/blockstates/digicode.json",
+          "src/main/java/net/mcreator/krusader_security/block/entity/DigicodeBlockEntity.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeInterface",
+      "type": "gui",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_interface",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/network/DigicodeInterfaceButtonMessage.java",
+          "src/main/java/net/mcreator/krusader_security/world/inventory/DigicodeInterfaceMenu.java",
+          "src/main/java/net/mcreator/krusader_security/client/gui/DigicodeInterfaceScreen.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton1Clicked",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_1_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton1ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton2Clicked",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_2_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton2ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton3Clicked",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_3_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton3ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton4Clicked",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_4_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton4ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton5Clicked",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_5_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton5ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton6Clicked",
+      "type": "procedure",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_6_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton6ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton7Clicked",
+      "type": "procedure",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_7_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton7ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton8Clicked",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_8_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton8ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton9Clicked",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_9_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton9ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButton0Clicked",
+      "type": "procedure",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_0_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButton0ClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeBlockAdded",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_block_added",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeBlockAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "ScreenShower",
+      "type": "procedure",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_shower",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/ScreenShowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButtonXClicked",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_x_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButtonXClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OnButtonVClicked",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "on_button_v_clicked",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/OnButtonVClickedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Screen2Stars",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_2_stars",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Screen2StarsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Screen3Stars",
+      "type": "procedure",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_3_stars",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Screen3StarsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Screen4Stars",
+      "type": "procedure",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_4_stars",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Screen4StarsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "ScreenRed",
+      "type": "procedure",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_red",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/ScreenRedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "ScreenGreen",
+      "type": "procedure",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_green",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/ScreenGreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeInterfaceThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_interface_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeInterfaceThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Screen5Stars",
+      "type": "procedure",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "screen_5_stars",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Screen5StarsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DevDigicode",
+      "type": "gui",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dev_digicode",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/client/gui/DevDigicodeScreen.java",
+          "src/main/java/net/mcreator/krusader_security/world/inventory/DevDigicodeMenu.java",
+          "src/main/java/net/mcreator/krusader_security/network/DevDigicodeButtonMessage.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "WrenchRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wrench_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/WrenchRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DevDigicodeThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dev_digicode_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DevDigicodeThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DevDigicodeThisGUIIsClosed",
+      "type": "procedure",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dev_digicode_this_gui_is_closed",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DevDigicodeThisGUIIsClosedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Wrench",
+      "type": "item",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wrench",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/item/wrench.json",
+          "src/main/java/net/mcreator/krusader_security/item/WrenchItem.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "ShowButtons",
+      "type": "procedure",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_buttons",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/ShowButtonsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DevDigicodeWhileThisGUIIsOpenTick",
+      "type": "procedure",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dev_digicode_while_this_gui_is_open_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DevDigicodeWhileThisGUIIsOpenTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Frame1Prod",
+      "type": "procedure",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frame_1_prod",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Frame1ProdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Frame2Prod",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frame_2_prod",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Frame2ProdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Frame3",
+      "type": "procedure",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frame_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Frame3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Frame4",
+      "type": "procedure",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frame_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Frame4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Frame5",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frame_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Frame5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Frame6",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frame_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/Frame6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "GivePlayerCredentials",
+      "type": "procedure",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_player_credentials",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/GivePlayerCredentialsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "GiveHintDigicodeRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_hint_digicode_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/GiveHintDigicodeRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "GiveHintDigicode",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_hint_digicode",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/item/give_hint_digicode.json",
+          "src/main/java/net/mcreator/krusader_security/item/GiveHintDigicodeItem.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "OneTimePasscodeChange",
+      "type": "item",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "one_time_passcode_change",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/item/one_time_passcode_change.json",
+          "src/main/java/net/mcreator/krusader_security/item/OneTimePasscodeChangeItem.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "GiveDigicodeReset",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "give_digicode_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/GiveDigicodeResetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "PCLoging",
+      "type": "gui",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_loging",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/world/inventory/PCLogingMenu.java",
+          "src/main/java/net/mcreator/krusader_security/client/gui/PCLogingScreen.java",
+          "src/main/java/net/mcreator/krusader_security/network/PCLogingButtonMessage.java"
+        ]
+      }
+    },
+    {
+      "name": "LoginPC",
+      "type": "procedure",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "login_pc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/LoginPCProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PC",
+      "type": "block",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/block/pc.json",
+          "src/main/resources/assets/krusader_security/blockstates/pc.json",
+          "src/main/java/net/mcreator/krusader_security/block/entity/PCBlockEntity.java",
+          "src/main/resources/assets/krusader_security/models/item/pc.json",
+          "src/main/java/net/mcreator/krusader_security/block/PCBlock.java"
+        ]
+      }
+    },
+    {
+      "name": "ShowLogsRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_logs_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/ShowLogsRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "ShowLogs",
+      "type": "item",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "show_logs",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/item/ShowLogsItem.java",
+          "src/main/resources/assets/krusader_security/models/item/show_logs.json"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "VersionCheck",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "version_check",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/VersionCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dev"
+    },
+    {
+      "name": "VersionCheckDate",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "version_check_date",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/VersionCheckDateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dev"
+    },
+    {
+      "name": "PCPasswordReset",
+      "type": "gui",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_password_reset",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/world/inventory/PCPasswordResetMenu.java",
+          "src/main/java/net/mcreator/krusader_security/network/PCPasswordResetButtonMessage.java",
+          "src/main/java/net/mcreator/krusader_security/client/gui/PCPasswordResetScreen.java"
+        ]
+      }
+    },
+    {
+      "name": "PasswordResetProd",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "password_reset_prod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PasswordResetProdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PasswordResetter",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "password_resetter",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PasswordResetterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "guistate",
+            "type": "map"
+          }
+        ]
+      }
+    }
+  ],
+  "variable_elements": [
+    {
+      "name": "isLoggedIn",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "sendOutMessage",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "ItemColorReset",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "currentDate",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "nextDate",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "currentVersion",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "nextVersion",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
+    },
+    {
+      "name": "sendDownloadLink",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ver1",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ver2",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "ver3",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "nextDateNum",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "currentDateNum",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    }
+  ],
+  "sound_elements": [],
+  "language_map": {
+    "en_us": {
+      "gui.gensec.pc_loging.label_password": "Password :",
+      "gui.digicode.digicode.button_71": "7",
+      "item.krusader_security.wrench": "Wrench",
+      "item.krusader_security.one_time_passcode_change": "One Time Passcode Change",
+      "gui.krusader_security.pc_password_reset.OldPassword": "Enter Old Password",
+      "gui.digicode.digicode.button_81": "8",
+      "gui.krusader_security.pc_loging.label_password": "Password :",
+      "gui.digicode.digicode.button_x": "X",
+      "gui.digicode.digicode.button_v": "V",
+      "gui.digicode.digicode.button_01": "0",
+      "gui.krusader_security.pc_loging.Username": "Insert Username",
+      "gui.gensec.pc_loging.Password": "Insert Password",
+      "item.gensec.give_hint_digicode": "Give Hint Digicode",
+      "gui.digicode.digicode.button_91": "9",
+      "gui.digicode.digicode.button_11": "1",
+      "gui.digicode.digicode.button_1": "1",
+      "gui.digicode.digicode.button_0": "0",
+      "gui.digicode.digicode.button_9": "9",
+      "gui.digicode.digicode.button_8": "8",
+      "gui.digicode.digicode.button_7": "7",
+      "gui.digicode.digicode.button_6": "6",
+      "gui.digicode.digicode.button_5": "5",
+      "gui.gensec.dev_digicode.button_9": "9",
+      "gui.digicode.digicode.button_4": "4",
+      "gui.digicode.digicode.button_3": "3",
+      "gui.gensec.dev_digicode.button_7": "7",
+      "gui.digicode.digicode.button_2": "2",
+      "gui.digicode.digicode.button_21": "2",
+      "gui.gensec.dev_digicode.button_8": "8",
+      "item.gensec.one_time_passcode_change": "One Time Passcode Change",
+      "gui.krusader_security.pc_loging.label_core": "Server : ",
+      "block.digicode.gui": "Gui",
+      "gui.krusader_security.dev_digicode.button_7": "7",
+      "gui.krusader_security.dev_digicode.button_6": "6",
+      "gui.krusader_security.dev_digicode.button_5": "5",
+      "gui.krusader_security.dev_digicode.button_4": "4",
+      "gui.digicode.digicode.button_31": "3",
+      "gui.krusader_security.dev_digicode.button_9": "9",
+      "gui.krusader_security.dev_digicode.button_8": "8",
+      "gui.gensec.dev_digicode.button_5": "5",
+      "gui.krusader_security.pc_password_reset.button_reset_password": "Reset Password",
+      "gui.gensec.dev_digicode.button_6": "6",
+      "gui.gensec.dev_digicode.button_3": "3",
+      "gui.gensec.dev_digicode.button_4": "4",
+      "gui.gensec.dev_digicode.button_1": "1",
+      "gui.gensec.dev_digicode.button_2": "2",
+      "gui.gensec.dev_digicode.button_0": "0",
+      "gui.gensec.pc_loging.button_reset_password": "Reset",
+      "gui.gensec.pc_loging.label_username": "Username :",
+      "gui.krusader_security.pc_loging.Core": "",
+      "gui.gensec.pc_loging.Username": "Insert Username",
+      "block.krusader_security.digicode": "Digicode",
+      "gui.digicode.digicode.button_41": "4",
+      "gui.gensec.pc_password_reset.OldPassword": "Enter Old Password",
+      "gui.gensec.pc_loging.button_reset": "Reset",
+      "gui.krusader_security.pc_loging.button_reset": "Reset",
+      "gui.gensec.pc_password_reset.button_reset_password": "Reset Password",
+      "item.gensec.wrench": "Wrench",
+      "gui.krusader_security.dev_digicode.button_3": "3",
+      "gui.krusader_security.pc_loging.button_log_in": "Log in",
+      "gui.krusader_security.dev_digicode.button_2": "2",
+      "gui.krusader_security.dev_digicode.button_1": "1",
+      "gui.krusader_security.dev_digicode.button_0": "0",
+      "gui.digicode.digicode.button_51": "5",
+      "block.gensec.digicode": "Digicode",
+      "gui.krusader_security.pc_password_reset.NewPassword": "Enter New Password",
+      "gui.gensec.pc_loging.button_yes": "Log in",
+      "item.krusader_security.give_hint_digicode": "Give Hint Digicode",
+      "gui.gensec.digicode_interface.button_5": "5",
+      "gui.krusader_security.digicode_interface.button_7": "7",
+      "gui.gensec.digicode_interface.button_6": "6",
+      "gui.krusader_security.digicode_interface.button_6": "6",
+      "gui.gensec.digicode_interface.button_3": "3",
+      "gui.krusader_security.digicode_interface.button_5": "5",
+      "block.krusader_security.pc": "Computer",
+      "gui.gensec.digicode_interface.button_4": "4",
+      "gui.krusader_security.digicode_interface.button_4": "4",
+      "gui.gensec.digicode_interface.button_1": "1",
+      "gui.gensec.digicode_interface.button_2": "2",
+      "gui.krusader_security.digicode_interface.button_9": "9",
+      "gui.gensec.digicode_interface.button_0": "0",
+      "gui.krusader_security.digicode_interface.button_8": "8",
+      "gui.gensec.digicode_interface.button_9": "9",
+      "gui.krusader_security.digicode_interface.button_3": "3",
+      "gui.gensec.pc_loging.label_core": "Server : ",
+      "gui.krusader_security.digicode_interface.button_2": "2",
+      "gui.gensec.digicode_interface.button_7": "7",
+      "gui.krusader_security.digicode_interface.button_1": "1",
+      "gui.krusader_security.pc_loging.Password": "Insert Password",
+      "gui.gensec.digicode_interface.button_8": "8",
+      "gui.krusader_security.digicode_interface.button_0": "0",
+      "gui.digicode.digicode.button_61": "6",
+      "item.gensec.show_logs": "Show Logs",
+      "gui.gensec.pc_password_reset.NewPassword": "Enter New Password",
+      "gui.gensec.pc_loging.button_log_in": "Log in",
+      "gui.gensec.pc_loging.Core": "",
+      "item.krusader_security.show_logs": "Show Logs",
+      "gui.krusader_security.pc_loging.label_username": "Username :",
+      "block.gensec.pc": "Computer"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": [
+      {
+        "name": "Digicode",
+        "children": []
+      },
+      {
+        "name": "Dev",
+        "children": []
+      }
+    ]
+  },
+  "workspaceSettings": {
+    "modid": "krusader_security",
+    "modName": "Krusader Security",
+    "version": "0.0.1",
+    "author": "saver, MCreator",
+    "websiteURL": "https://mcreator.net",
+    "license": "Academic Free License v3.0",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "requiredMods": [],
+    "dependencies": [],
+    "dependants": [],
+    "mcreatorDependencies": [],
+    "currentGenerator": "forge-1.20.1",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "modElementsPackage": "net.mcreator.krusader_security",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300452316
+}
