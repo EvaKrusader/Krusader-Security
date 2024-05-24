@@ -49,49 +49,49 @@
       {
         "type": "image",
         "data": {
-          "image": "code3.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Screen4Stars"
-          },
-          "x": 130,
-          "y": 47
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "code2.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Screen3Stars"
-          },
-          "x": 130,
-          "y": 47
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "code1.png",
-          "use1Xscale": true,
-          "displayCondition": {
-            "name": "Screen2Stars"
-          },
-          "x": 130,
-          "y": 47
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "code.png",
+          "image": "codeblack1.png",
           "use1Xscale": true,
           "displayCondition": {
             "name": "ScreenShower"
           },
-          "x": 130,
-          "y": 47
+          "x": 140,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "codeblack.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen2Stars"
+          },
+          "x": 161,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "codeblack.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen3Stars"
+          },
+          "x": 203,
+          "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "codeblack.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "Screen4Stars"
+          },
+          "x": 246,
+          "y": 49
         }
       },
       {
@@ -402,7 +402,7 @@
       "sy": 18,
       "ox": 6,
       "oy": 20,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

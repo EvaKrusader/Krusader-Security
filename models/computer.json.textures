@@ -6,6 +6,13 @@
         "body": "computer_body"
       },
       "name": "default"
+    },
+    "creeper": {
+      "map": {
+        "screen": "computer_screen",
+        "body": "fire_animated"
+      },
+      "name": "creeper"
     }
   }
 }

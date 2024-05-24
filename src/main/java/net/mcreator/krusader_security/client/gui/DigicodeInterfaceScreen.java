@@ -79,17 +79,17 @@ public class DigicodeInterfaceScreen extends AbstractContainerScreen<DigicodeInt
 		if (Screen5StarsProcedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/code4.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
 		}
-		if (Screen4StarsProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/code3.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
-		}
-		if (Screen3StarsProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/code2.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
+		if (ScreenShowerProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/codeblack1.png"), this.leftPos + 17, this.topPos + 9, 0, 0, 25, 24, 25, 24);
 		}
 		if (Screen2StarsProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/code1.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/codeblack.png"), this.leftPos + 38, this.topPos + 9, 0, 0, 50, 24, 50, 24);
 		}
-		if (ScreenShowerProcedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/code.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
+		if (Screen3StarsProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/codeblack.png"), this.leftPos + 80, this.topPos + 9, 0, 0, 50, 24, 50, 24);
+		}
+		if (Screen4StarsProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/codeblack.png"), this.leftPos + 123, this.topPos + 9, 0, 0, 50, 24, 50, 24);
 		}
 
 		guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/dark0.png"), this.leftPos + 79, this.topPos + 124, 0, 0, 30, 20, 30, 20);

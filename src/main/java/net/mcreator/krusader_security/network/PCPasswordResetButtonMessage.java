@@ -12,6 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import net.mcreator.krusader_security.world.inventory.PCPasswordResetMenu;
+import net.mcreator.krusader_security.procedures.ReturnToLoginProcedure;
 import net.mcreator.krusader_security.procedures.PasswordResetterProcedure;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
@@ -65,6 +66,10 @@ public class PCPasswordResetButtonMessage {
 		if (buttonID == 0) {
 
 			PasswordResetterProcedure.execute(entity, guistate);
+		}
+		if (buttonID == 1) {
+
+			ReturnToLoginProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

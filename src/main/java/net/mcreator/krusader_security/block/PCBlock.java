@@ -1,6 +1,8 @@
 
 package net.mcreator.krusader_security.block;
 
+import org.checkerframework.checker.units.qual.s;
+
 import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -8,6 +10,7 @@ import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -46,10 +49,17 @@ import java.util.Collections;
 import io.netty.buffer.Unpooled;
 
 public class PCBlock extends Block implements EntityBlock {
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public PCBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.LADDER).strength(1f, 10f).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
+		super(BlockBehaviour.Properties.of().sound(SoundType.LADDER).strength(1f, 10f).lightLevel(s -> (new Object() {
+			public int getLightLevel() {
+				if (s.getValue(BLOCKSTATE) == 1)
+					return 0;
+				return 0;
+			}
+		}.getLightLevel())).noOcclusion().isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -75,6 +85,18 @@ public class PCBlock extends Block implements EntityBlock {
 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		if (state.getValue(BLOCKSTATE) == 1) {
+			return switch (state.getValue(FACING)) {
+				default ->
+					Shapes.or(box(4, 0, 5, 12, 0.5, 11), box(6.75, 0, 7, 9.25, 2.5, 9.5), box(4, 3, 5, 12, 10, 11), box(3, 2, 4, 13, 3, 12), box(3, 10, 4, 13, 11, 12), box(12, 3, 5, 13, 10, 12), box(3, 3, 5, 4, 10, 12), box(3, 3, 4, 13, 10, 5));
+				case NORTH ->
+					Shapes.or(box(4, 0, 5, 12, 0.5, 11), box(6.75, 0, 6.5, 9.25, 2.5, 9), box(4, 3, 5, 12, 10, 11), box(3, 2, 4, 13, 3, 12), box(3, 10, 4, 13, 11, 12), box(3, 3, 4, 4, 10, 11), box(12, 3, 4, 13, 10, 11), box(3, 3, 11, 13, 10, 12));
+				case EAST ->
+					Shapes.or(box(5, 0, 4, 11, 0.5, 12), box(7, 0, 6.75, 9.5, 2.5, 9.25), box(5, 3, 4, 11, 10, 12), box(4, 2, 3, 12, 3, 13), box(4, 10, 3, 12, 11, 13), box(5, 3, 3, 12, 10, 4), box(5, 3, 12, 12, 10, 13), box(4, 3, 3, 5, 10, 13));
+				case WEST ->
+					Shapes.or(box(5, 0, 4, 11, 0.5, 12), box(6.5, 0, 6.75, 9, 2.5, 9.25), box(5, 3, 4, 11, 10, 12), box(4, 2, 3, 12, 3, 13), box(4, 10, 3, 12, 11, 13), box(4, 3, 12, 11, 10, 13), box(4, 3, 3, 11, 10, 4), box(11, 3, 3, 12, 10, 13));
+			};
+		}
 		return switch (state.getValue(FACING)) {
 			default -> Shapes.or(box(4, 0, 5, 12, 0.5, 11), box(6.75, 0, 7, 9.25, 2.5, 9.5), box(4, 3, 5, 12, 10, 11), box(3, 2, 4, 13, 3, 12), box(3, 10, 4, 13, 11, 12), box(12, 3, 5, 13, 10, 12), box(3, 3, 5, 4, 10, 12), box(3, 3, 4, 13, 10, 5));
 			case NORTH ->
@@ -87,7 +109,7 @@ public class PCBlock extends Block implements EntityBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(FACING);
+		builder.add(FACING, BLOCKSTATE);
 	}
 
 	@Override

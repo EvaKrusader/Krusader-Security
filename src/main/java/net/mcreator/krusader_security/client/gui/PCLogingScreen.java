@@ -1,7 +1,5 @@
 package net.mcreator.krusader_security.client.gui;
 
-import org.apache.logging.log4j.core.Core;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
@@ -13,6 +11,14 @@ import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import net.mcreator.krusader_security.world.inventory.PCLogingMenu;
+import net.mcreator.krusader_security.procedures.PcAnim8Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim7Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim6Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim5Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim4Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim3Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim2Procedure;
+import net.mcreator.krusader_security.procedures.PcAnim1Procedure;
 import net.mcreator.krusader_security.network.PCLogingButtonMessage;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
@@ -27,7 +33,6 @@ public class PCLogingScreen extends AbstractContainerScreen<PCLogingMenu> {
 	private final Player entity;
 	EditBox Username;
 	EditBox Password;
-	EditBox Core;
 	Button button_reset;
 	Button button_log_in;
 
@@ -48,7 +53,6 @@ public class PCLogingScreen extends AbstractContainerScreen<PCLogingMenu> {
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		Username.render(guiGraphics, mouseX, mouseY, partialTicks);
 		Password.render(guiGraphics, mouseX, mouseY, partialTicks);
-		Core.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
 
@@ -59,6 +63,33 @@ public class PCLogingScreen extends AbstractContainerScreen<PCLogingMenu> {
 		RenderSystem.defaultBlendFunc();
 
 		guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_loging.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 256, 166, 256, 166);
+
+		if (PcAnim1Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim1.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim2Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim2.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim3Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim3.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim4Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim4.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim5Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim5.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim6Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim6.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim7Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim7.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+		if (PcAnim8Procedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_login_anim8.png"), this.leftPos + 19, this.topPos + 19, 0, 0, 83, 128, 83, 128);
+		}
+
+		guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/adspace_test.png"), this.leftPos + 118, this.topPos + 89, 0, 0, 120, 36, 120, 36);
 
 		RenderSystem.disableBlend();
 	}
@@ -73,8 +104,6 @@ public class PCLogingScreen extends AbstractContainerScreen<PCLogingMenu> {
 			return Username.keyPressed(key, b, c);
 		if (Password.isFocused())
 			return Password.keyPressed(key, b, c);
-		if (Core.isFocused())
-			return Core.keyPressed(key, b, c);
 		return super.keyPressed(key, b, c);
 	}
 
@@ -83,14 +112,12 @@ public class PCLogingScreen extends AbstractContainerScreen<PCLogingMenu> {
 		super.containerTick();
 		Username.tick();
 		Password.tick();
-		Core.tick();
 	}
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font, Component.translatable("gui.krusader_security.pc_loging.label_username"), 118, 16, -12829636, false);
 		guiGraphics.drawString(this.font, Component.translatable("gui.krusader_security.pc_loging.label_password"), 118, 52, -12829636, false);
-		guiGraphics.drawString(this.font, Component.translatable("gui.krusader_security.pc_loging.label_core"), 118, 88, -12829636, false);
 	}
 
 	@Override
@@ -147,10 +174,6 @@ public class PCLogingScreen extends AbstractContainerScreen<PCLogingMenu> {
 		Password.setMaxLength(32767);
 		guistate.put("text:Password", Password);
 		this.addWidget(this.Password);
-		Core = new EditBox(this.font, this.leftPos + 119, this.topPos + 98, 118, 18, Component.translatable("gui.krusader_security.pc_loging.Core"));
-		Core.setMaxLength(32767);
-		guistate.put("text:Core", Core);
-		this.addWidget(this.Core);
 		button_reset = Button.builder(Component.translatable("gui.krusader_security.pc_loging.button_reset"), e -> {
 			if (true) {
 				KrusaderSecurityMod.PACKET_HANDLER.sendToServer(new PCLogingButtonMessage(0, x, y, z));

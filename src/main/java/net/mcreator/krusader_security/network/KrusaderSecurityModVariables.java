@@ -77,6 +77,8 @@ public class KrusaderSecurityModVariables {
 			clone.ver3 = original.ver3;
 			clone.nextDateNum = original.nextDateNum;
 			clone.currentDateNum = original.currentDateNum;
+			clone.login_anim = original.login_anim;
+			clone.whatPcAnim = original.whatPcAnim;
 			if (!event.isWasDeath()) {
 				clone.isLoggedIn = original.isLoggedIn;
 				clone.sendOutMessage = original.sendOutMessage;
@@ -117,7 +119,7 @@ public class KrusaderSecurityModVariables {
 	public static class PlayerVariables {
 		public boolean isLoggedIn = false;
 		public boolean sendOutMessage = false;
-		public String ItemColorReset = "\"\"";
+		public String ItemColorReset = "\u00A7r\u00A7f";
 		public String currentDate = "\"\"";
 		public String nextDate = "\"\"";
 		public String currentVersion = "\"\"";
@@ -128,6 +130,8 @@ public class KrusaderSecurityModVariables {
 		public double ver3 = 0;
 		public double nextDateNum = 0;
 		public double currentDateNum = 0;
+		public double login_anim = 0.0;
+		public double whatPcAnim = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -149,6 +153,8 @@ public class KrusaderSecurityModVariables {
 			nbt.putDouble("ver3", ver3);
 			nbt.putDouble("nextDateNum", nextDateNum);
 			nbt.putDouble("currentDateNum", currentDateNum);
+			nbt.putDouble("login_anim", login_anim);
+			nbt.putDouble("whatPcAnim", whatPcAnim);
 			return nbt;
 		}
 
@@ -167,6 +173,8 @@ public class KrusaderSecurityModVariables {
 			ver3 = nbt.getDouble("ver3");
 			nextDateNum = nbt.getDouble("nextDateNum");
 			currentDateNum = nbt.getDouble("currentDateNum");
+			login_anim = nbt.getDouble("login_anim");
+			whatPcAnim = nbt.getDouble("whatPcAnim");
 		}
 	}
 
@@ -204,6 +212,8 @@ public class KrusaderSecurityModVariables {
 					variables.ver3 = message.data.ver3;
 					variables.nextDateNum = message.data.nextDateNum;
 					variables.currentDateNum = message.data.currentDateNum;
+					variables.login_anim = message.data.login_anim;
+					variables.whatPcAnim = message.data.whatPcAnim;
 				}
 			});
 			context.setPacketHandled(true);

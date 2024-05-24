@@ -18,12 +18,6 @@ import net.mcreator.krusader_security.procedures.Screen5StarsProcedure;
 import net.mcreator.krusader_security.procedures.Screen4StarsProcedure;
 import net.mcreator.krusader_security.procedures.Screen3StarsProcedure;
 import net.mcreator.krusader_security.procedures.Screen2StarsProcedure;
-import net.mcreator.krusader_security.procedures.Frame6Procedure;
-import net.mcreator.krusader_security.procedures.Frame5Procedure;
-import net.mcreator.krusader_security.procedures.Frame4Procedure;
-import net.mcreator.krusader_security.procedures.Frame3Procedure;
-import net.mcreator.krusader_security.procedures.Frame2ProdProcedure;
-import net.mcreator.krusader_security.procedures.Frame1ProdProcedure;
 import net.mcreator.krusader_security.network.DevDigicodeButtonMessage;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
@@ -95,24 +89,6 @@ public class DevDigicodeScreen extends AbstractContainerScreen<DevDigicodeMenu> 
 		}
 		if (ScreenShowerProcedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/code.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
-		}
-		if (Frame1ProdProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/aptitude_smartass0.png"), this.leftPos + 223, this.topPos + 61, 0, 0, 16, 16, 16, 16);
-		}
-		if (Frame2ProdProcedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/aptitude_smartass1.png"), this.leftPos + 223, this.topPos + 61, 0, 0, 16, 16, 16, 16);
-		}
-		if (Frame3Procedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/aptitude_smartass2.png"), this.leftPos + 223, this.topPos + 61, 0, 0, 16, 16, 16, 16);
-		}
-		if (Frame4Procedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/aptitude_smartass3.png"), this.leftPos + 223, this.topPos + 61, 0, 0, 16, 16, 16, 16);
-		}
-		if (Frame5Procedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/aptitude_smartass4.png"), this.leftPos + 223, this.topPos + 61, 0, 0, 16, 16, 16, 16);
-		}
-		if (Frame6Procedure.execute(entity)) {
-			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/aptitude_smartass5.png"), this.leftPos + 223, this.topPos + 61, 0, 0, 16, 16, 16, 16);
 		}
 		RenderSystem.disableBlend();
 	}

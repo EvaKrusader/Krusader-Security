@@ -35,7 +35,14 @@ public class GiveHintDigicodeRightclickedOnBlockProcedure {
 		String yearsString = "";
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == KrusaderSecurityModBlocks.DIGICODE.get()) {
 			if (entity.isShiftKeyDown()) {
-				randomDigit = Mth.nextInt(RandomSource.create(), 1, 4);
+				randomDigit = Mth.nextInt(RandomSource.create(), 1, (int) (new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).length());
 				if (randomDigit == 1) {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component.literal(((new Object() {

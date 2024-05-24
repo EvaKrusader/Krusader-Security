@@ -25,7 +25,8 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 	private final Player entity;
 	EditBox OldPassword;
 	EditBox NewPassword;
-	Button button_reset_password;
+	Button button_reset;
+	Button button_return;
 
 	public PCPasswordResetScreen(PCPasswordResetMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -37,8 +38,6 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 		this.imageWidth = 256;
 		this.imageHeight = 166;
 	}
-
-	private static final ResourceLocation texture = new ResourceLocation("krusader_security:textures/screens/pc_password_reset.png");
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
@@ -54,7 +53,9 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
-		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+
+		guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/pc_password_reset.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 256, 166, 256, 166);
+
 		RenderSystem.disableBlend();
 	}
 
@@ -80,6 +81,8 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
+		guiGraphics.drawString(this.font, Component.translatable("gui.krusader_security.pc_password_reset.label_old_password"), 19, 16, -12829636, false);
+		guiGraphics.drawString(this.font, Component.translatable("gui.krusader_security.pc_password_reset.label_new_password"), 19, 52, -12829636, false);
 	}
 
 	@Override
@@ -90,7 +93,7 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 	@Override
 	public void init() {
 		super.init();
-		OldPassword = new EditBox(this.font, this.leftPos + 74, this.topPos + 17, 118, 18, Component.translatable("gui.krusader_security.pc_password_reset.OldPassword")) {
+		OldPassword = new EditBox(this.font, this.leftPos + 20, this.topPos + 26, 118, 18, Component.translatable("gui.krusader_security.pc_password_reset.OldPassword")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -113,7 +116,7 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 		OldPassword.setMaxLength(32767);
 		guistate.put("text:OldPassword", OldPassword);
 		this.addWidget(this.OldPassword);
-		NewPassword = new EditBox(this.font, this.leftPos + 74, this.topPos + 62, 118, 18, Component.translatable("gui.krusader_security.pc_password_reset.NewPassword")) {
+		NewPassword = new EditBox(this.font, this.leftPos + 20, this.topPos + 62, 118, 18, Component.translatable("gui.krusader_security.pc_password_reset.NewPassword")) {
 			@Override
 			public void insertText(String text) {
 				super.insertText(text);
@@ -136,13 +139,21 @@ public class PCPasswordResetScreen extends AbstractContainerScreen<PCPasswordRes
 		NewPassword.setMaxLength(32767);
 		guistate.put("text:NewPassword", NewPassword);
 		this.addWidget(this.NewPassword);
-		button_reset_password = Button.builder(Component.translatable("gui.krusader_security.pc_password_reset.button_reset_password"), e -> {
+		button_reset = Button.builder(Component.translatable("gui.krusader_security.pc_password_reset.button_reset"), e -> {
 			if (true) {
 				KrusaderSecurityMod.PACKET_HANDLER.sendToServer(new PCPasswordResetButtonMessage(0, x, y, z));
 				PCPasswordResetButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 82, this.topPos + 106, 98, 20).build();
-		guistate.put("button:button_reset_password", button_reset_password);
-		this.addRenderableWidget(button_reset_password);
+		}).bounds(this.leftPos + 91, this.topPos + 124, 51, 20).build();
+		guistate.put("button:button_reset", button_reset);
+		this.addRenderableWidget(button_reset);
+		button_return = Button.builder(Component.translatable("gui.krusader_security.pc_password_reset.button_return"), e -> {
+			if (true) {
+				KrusaderSecurityMod.PACKET_HANDLER.sendToServer(new PCPasswordResetButtonMessage(1, x, y, z));
+				PCPasswordResetButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}).bounds(this.leftPos + 19, this.topPos + 124, 56, 20).build();
+		guistate.put("button:button_return", button_return);
+		this.addRenderableWidget(button_return);
 	}
 }

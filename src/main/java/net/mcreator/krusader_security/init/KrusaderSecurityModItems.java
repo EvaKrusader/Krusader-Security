@@ -16,6 +16,7 @@ import net.mcreator.krusader_security.item.WrenchItem;
 import net.mcreator.krusader_security.item.ShowLogsItem;
 import net.mcreator.krusader_security.item.OneTimePasscodeChangeItem;
 import net.mcreator.krusader_security.item.GiveHintDigicodeItem;
+import net.mcreator.krusader_security.item.CrepercItem;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
 public class KrusaderSecurityModItems {
@@ -26,6 +27,7 @@ public class KrusaderSecurityModItems {
 	public static final RegistryObject<Item> ONE_TIME_PASSCODE_CHANGE = REGISTRY.register("one_time_passcode_change", () -> new OneTimePasscodeChangeItem());
 	public static final RegistryObject<Item> PC = block(KrusaderSecurityModBlocks.PC);
 	public static final RegistryObject<Item> SHOW_LOGS = REGISTRY.register("show_logs", () -> new ShowLogsItem());
+	public static final RegistryObject<Item> CREPERC = REGISTRY.register("creperc", () -> new CrepercItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

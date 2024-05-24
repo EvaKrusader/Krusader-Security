@@ -1362,6 +1362,286 @@
           }
         ]
       }
+    },
+    {
+      "name": "PCLoginAnimProd",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_login_anim_prod",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PCLoginAnimProdProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim1",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_1",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim2",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_2",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim3",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_3",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim4",
+      "type": "procedure",
+      "sortid": 59,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_4",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim5",
+      "type": "procedure",
+      "sortid": 60,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_5",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim6",
+      "type": "procedure",
+      "sortid": 61,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_6",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim7",
+      "type": "procedure",
+      "sortid": 62,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_7",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PcAnim8",
+      "type": "procedure",
+      "sortid": 63,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_anim_8",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PcAnim8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ReturnToLogin",
+      "type": "procedure",
+      "sortid": 64,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_to_login",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/ReturnToLoginProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "PCBlockstates",
+      "type": "blockstates",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_blockstates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/block/pc_blockstates_blockstate_0.json"
+        ]
+      }
+    },
+    {
+      "name": "CrepercRightclickedOnBlock",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creperc_rightclicked_on_block",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/CrepercRightclickedOnBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Creperc",
+      "type": "item",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creperc",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/item/CrepercItem.java",
+          "src/main/resources/assets/krusader_security/models/item/creperc.json"
+        ]
+      }
     }
   ],
   "variable_elements": [
@@ -1381,7 +1661,7 @@
       "name": "ItemColorReset",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "§r§f"
     },
     {
       "name": "currentDate",
@@ -1442,6 +1722,18 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "login_anim",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "whatPcAnim",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
     }
   ],
   "sound_elements": [],
@@ -1460,8 +1752,10 @@
       "gui.krusader_security.pc_loging.Username": "Insert Username",
       "gui.gensec.pc_loging.Password": "Insert Password",
       "item.gensec.give_hint_digicode": "Give Hint Digicode",
+      "item.krusader_security.creperc": "Creperc",
       "gui.digicode.digicode.button_91": "9",
       "gui.digicode.digicode.button_11": "1",
+      "gui.krusader_security.pc_password_reset.button_reset": "Reset",
       "gui.digicode.digicode.button_1": "1",
       "gui.digicode.digicode.button_0": "0",
       "gui.digicode.digicode.button_9": "9",
@@ -1473,9 +1767,9 @@
       "gui.digicode.digicode.button_4": "4",
       "gui.digicode.digicode.button_3": "3",
       "gui.gensec.dev_digicode.button_7": "7",
-      "gui.digicode.digicode.button_2": "2",
-      "gui.digicode.digicode.button_21": "2",
       "gui.gensec.dev_digicode.button_8": "8",
+      "gui.digicode.digicode.button_21": "2",
+      "gui.digicode.digicode.button_2": "2",
       "item.gensec.one_time_passcode_change": "One Time Passcode Change",
       "gui.krusader_security.pc_loging.label_core": "Server : ",
       "block.digicode.gui": "Gui",
@@ -1492,6 +1786,7 @@
       "gui.gensec.dev_digicode.button_3": "3",
       "gui.gensec.dev_digicode.button_4": "4",
       "gui.gensec.dev_digicode.button_1": "1",
+      "gui.krusader_security.pc_password_reset.label_new_password": "New Password",
       "gui.gensec.dev_digicode.button_2": "2",
       "gui.gensec.dev_digicode.button_0": "0",
       "gui.gensec.pc_loging.button_reset_password": "Reset",
@@ -1503,6 +1798,7 @@
       "gui.gensec.pc_password_reset.OldPassword": "Enter Old Password",
       "gui.gensec.pc_loging.button_reset": "Reset",
       "gui.krusader_security.pc_loging.button_reset": "Reset",
+      "gui.krusader_security.pc_password_reset.label_old_password": "Old Password :",
       "gui.gensec.pc_password_reset.button_reset_password": "Reset Password",
       "item.gensec.wrench": "Wrench",
       "gui.krusader_security.dev_digicode.button_3": "3",
@@ -1515,6 +1811,7 @@
       "gui.krusader_security.pc_password_reset.NewPassword": "Enter New Password",
       "gui.gensec.pc_loging.button_yes": "Log in",
       "item.krusader_security.give_hint_digicode": "Give Hint Digicode",
+      "gui.krusader_security.pc_password_reset.button_return": "Return",
       "gui.gensec.digicode_interface.button_5": "5",
       "gui.krusader_security.digicode_interface.button_7": "7",
       "gui.gensec.digicode_interface.button_6": "6",

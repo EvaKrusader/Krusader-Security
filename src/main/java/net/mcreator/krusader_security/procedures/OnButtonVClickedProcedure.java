@@ -141,7 +141,7 @@ public class OnButtonVClickedProcedure {
 									return blockEntity.getPersistentData().getString(tag);
 								return "";
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")) + "000"));
+						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")) + ""));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -165,7 +165,7 @@ public class OnButtonVClickedProcedure {
 									return blockEntity.getPersistentData().getString(tag);
 								return "";
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")) + "00"));
+						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")) + ""));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -189,7 +189,7 @@ public class OnButtonVClickedProcedure {
 									return blockEntity.getPersistentData().getString(tag);
 								return "";
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")) + "0"));
+						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")) + ""));
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}

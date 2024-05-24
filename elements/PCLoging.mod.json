@@ -102,29 +102,108 @@
         }
       },
       {
-        "type": "textfield",
+        "type": "image",
         "data": {
-          "placeholder": "",
-          "name": "Core",
-          "width": 120,
-          "height": 20,
-          "x": 204,
-          "y": 134
+          "image": "pc_login_anim1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim1"
+          },
+          "x": 105,
+          "y": 56
         }
       },
       {
-        "type": "label",
+        "type": "image",
         "data": {
-          "name": "label_core",
-          "text": {
-            "fixedValue": "Server : "
+          "image": "pc_login_anim2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim2"
           },
-          "color": {
-            "value": -12829636,
-            "falpha": 0.0
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim3"
           },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim4"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim5"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim6"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim7"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim8"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adspace_test.png",
+          "use1Xscale": false,
           "x": 204,
-          "y": 125
+          "y": 126
         }
       }
     ],
@@ -133,7 +212,7 @@
       "sy": 18,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

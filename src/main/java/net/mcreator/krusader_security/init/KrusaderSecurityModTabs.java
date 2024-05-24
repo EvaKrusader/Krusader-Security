@@ -29,6 +29,7 @@ public class KrusaderSecurityModTabs {
 			tabData.accept(KrusaderSecurityModItems.ONE_TIME_PASSCODE_CHANGE.get());
 			tabData.accept(KrusaderSecurityModBlocks.PC.get().asItem());
 			tabData.accept(KrusaderSecurityModItems.SHOW_LOGS.get());
+			tabData.accept(KrusaderSecurityModItems.CREPERC.get());
 		}
 	}
 }
