@@ -16,6 +16,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.krusader_security.procedures.DigicodeInterfaceThisGUIIsOpenedProcedure;
 import net.mcreator.krusader_security.procedures.DigicodeInterfaceThisGUIIsClosedProcedure;
 import net.mcreator.krusader_security.init.KrusaderSecurityModMenus;
 
@@ -49,7 +50,7 @@ public class DigicodeInterfaceMenu extends AbstractContainerMenu implements Supp
 			this.z = pos.getZ();
 			access = ContainerLevelAccess.create(world, pos);
 		}
-		DigicodeInterfaceThisGUIIsClosedProcedure.execute(world, x, y, z);
+		DigicodeInterfaceThisGUIIsOpenedProcedure.execute(world, x, y, z);
 	}
 
 	@Override

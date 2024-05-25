@@ -1,0 +1,10 @@
+{
+  "parent": "krusader_security:custom/terminal",
+  "textures": {
+    "all": "krusader_security:block/screenoverlay",
+    "particle": "krusader_security:block/screenoverlay",
+    "screen": "krusader_security:block/terminal_screen",
+    "body": "krusader_security:block/terminal_body"
+  },
+  "render_type": "cutout_mipped"
+}

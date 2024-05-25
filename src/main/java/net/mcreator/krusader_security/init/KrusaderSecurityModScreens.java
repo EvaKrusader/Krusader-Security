@@ -12,9 +12,9 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraft.client.gui.screens.MenuScreens;
 
 import net.mcreator.krusader_security.client.gui.PCPasswordResetScreen;
-import net.mcreator.krusader_security.client.gui.PCLogingScreen;
 import net.mcreator.krusader_security.client.gui.DigicodeInterfaceScreen;
 import net.mcreator.krusader_security.client.gui.DevDigicodeScreen;
+import net.mcreator.krusader_security.client.gui.ComputerLoginScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class KrusaderSecurityModScreens {
@@ -23,8 +23,8 @@ public class KrusaderSecurityModScreens {
 		event.enqueueWork(() -> {
 			MenuScreens.register(KrusaderSecurityModMenus.DIGICODE_INTERFACE.get(), DigicodeInterfaceScreen::new);
 			MenuScreens.register(KrusaderSecurityModMenus.DEV_DIGICODE.get(), DevDigicodeScreen::new);
-			MenuScreens.register(KrusaderSecurityModMenus.PC_LOGING.get(), PCLogingScreen::new);
 			MenuScreens.register(KrusaderSecurityModMenus.PC_PASSWORD_RESET.get(), PCPasswordResetScreen::new);
+			MenuScreens.register(KrusaderSecurityModMenus.COMPUTER_LOGIN.get(), ComputerLoginScreen::new);
 		});
 	}
 }

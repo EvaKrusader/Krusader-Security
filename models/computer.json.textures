@@ -10,7 +10,7 @@
     "creeper": {
       "map": {
         "screen": "computer_screen",
-        "body": "fire_animated"
+        "body": "computer_body_creeper"
       },
       "name": "creeper"
     }

@@ -22,12 +22,13 @@ import net.mcreator.krusader_security.KrusaderSecurityMod;
 public class KrusaderSecurityModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, KrusaderSecurityMod.MODID);
 	public static final RegistryObject<Item> DIGICODE = block(KrusaderSecurityModBlocks.DIGICODE);
+	public static final RegistryObject<Item> ONE_TIME_PASSCODE_CHANGE = REGISTRY.register("one_time_passcode_change", () -> new OneTimePasscodeChangeItem());
 	public static final RegistryObject<Item> WRENCH = REGISTRY.register("wrench", () -> new WrenchItem());
 	public static final RegistryObject<Item> GIVE_HINT_DIGICODE = REGISTRY.register("give_hint_digicode", () -> new GiveHintDigicodeItem());
-	public static final RegistryObject<Item> ONE_TIME_PASSCODE_CHANGE = REGISTRY.register("one_time_passcode_change", () -> new OneTimePasscodeChangeItem());
-	public static final RegistryObject<Item> PC = block(KrusaderSecurityModBlocks.PC);
 	public static final RegistryObject<Item> SHOW_LOGS = REGISTRY.register("show_logs", () -> new ShowLogsItem());
 	public static final RegistryObject<Item> CREPERC = REGISTRY.register("creperc", () -> new CrepercItem());
+	public static final RegistryObject<Item> TERMINAL = block(KrusaderSecurityModBlocks.TERMINAL);
+	public static final RegistryObject<Item> COMPUTER = block(KrusaderSecurityModBlocks.COMPUTER);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

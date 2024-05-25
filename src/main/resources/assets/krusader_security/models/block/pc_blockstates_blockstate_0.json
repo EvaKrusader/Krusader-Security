@@ -1,10 +1,10 @@
 {
   "parent": "krusader_security:custom/computer",
   "textures": {
-    "all": "krusader_security:block/carpettrap",
+    "all": "krusader_security:block/computer_body_creeper",
     "particle": "krusader_security:block/screenoverlay",
     "screen": "krusader_security:block/computer_screen",
-    "body": "krusader_security:block/fire_animated"
+    "body": "krusader_security:block/computer_body_creeper"
   },
   "render_type": "cutout_mipped"
 }

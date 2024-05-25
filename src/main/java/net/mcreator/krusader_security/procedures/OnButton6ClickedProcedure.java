@@ -28,24 +28,6 @@ public class OnButton6ClickedProcedure {
 				BlockEntity _blockEntity = world.getBlockEntity(_bp);
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("showRed", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putBoolean("showGreen", false);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putString("typingPassword", ((new Object() {
 						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 							BlockEntity blockEntity = world.getBlockEntity(pos);
@@ -74,6 +56,24 @@ public class OnButton6ClickedProcedure {
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}
+		}
+		if (!world.isClientSide()) {
+			BlockPos _bp = BlockPos.containing(x, y, z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null)
+				_blockEntity.getPersistentData().putBoolean("showRed", false);
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+		}
+		if (!world.isClientSide()) {
+			BlockPos _bp = BlockPos.containing(x, y, z);
+			BlockEntity _blockEntity = world.getBlockEntity(_bp);
+			BlockState _bs = world.getBlockState(_bp);
+			if (_blockEntity != null)
+				_blockEntity.getPersistentData().putBoolean("showGreen", false);
+			if (world instanceof Level _level)
+				_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 		}
 	}
 }

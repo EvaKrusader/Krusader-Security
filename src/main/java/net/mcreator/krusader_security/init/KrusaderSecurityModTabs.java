@@ -24,12 +24,13 @@ public class KrusaderSecurityModTabs {
 
 		if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
 			tabData.accept(KrusaderSecurityModBlocks.DIGICODE.get().asItem());
+			tabData.accept(KrusaderSecurityModItems.ONE_TIME_PASSCODE_CHANGE.get());
 			tabData.accept(KrusaderSecurityModItems.WRENCH.get());
 			tabData.accept(KrusaderSecurityModItems.GIVE_HINT_DIGICODE.get());
-			tabData.accept(KrusaderSecurityModItems.ONE_TIME_PASSCODE_CHANGE.get());
-			tabData.accept(KrusaderSecurityModBlocks.PC.get().asItem());
 			tabData.accept(KrusaderSecurityModItems.SHOW_LOGS.get());
 			tabData.accept(KrusaderSecurityModItems.CREPERC.get());
+			tabData.accept(KrusaderSecurityModBlocks.TERMINAL.get().asItem());
+			tabData.accept(KrusaderSecurityModBlocks.COMPUTER.get().asItem());
 		}
 	}
 }

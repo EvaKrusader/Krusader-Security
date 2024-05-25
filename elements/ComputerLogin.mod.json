@@ -1,0 +1,248 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 256,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Insert Username",
+          "name": "Username",
+          "width": 120,
+          "height": 20,
+          "x": 204,
+          "y": 62
+        }
+      },
+      {
+        "type": "textfield",
+        "data": {
+          "placeholder": "Insert Password",
+          "name": "Password",
+          "width": 120,
+          "height": 20,
+          "x": 204,
+          "y": 98
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_loging.png",
+          "use1Xscale": false,
+          "x": 86,
+          "y": 37
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_reset",
+          "text": "Reset",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "PasswordResetProd"
+          },
+          "width": 51,
+          "height": 20,
+          "x": 204,
+          "y": 170
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_username",
+          "text": {
+            "fixedValue": "Username :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_password",
+          "text": {
+            "fixedValue": "Password :"
+          },
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 89
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_log_in",
+          "text": "Log in",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "LoginPC"
+          },
+          "width": 56,
+          "height": 20,
+          "x": 267,
+          "y": 170
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim1"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim2"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim3"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim4"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim5"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim6.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim6"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim7.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim7"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "pc_login_anim8.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "PcAnim8"
+          },
+          "x": 105,
+          "y": 56
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adspace_test.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "WhatAdSpace"
+          },
+          "x": 204,
+          "y": 126
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adspace_lazarus.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "AdspaceLazarus"
+          },
+          "x": 204,
+          "y": 126
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adspace_thalp.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "AdspaceThalp"
+          },
+          "x": 204,
+          "y": 126
+        }
+      }
+    ],
+    "onOpen": {
+      "name": "PCLogingThisGUIIsOpened"
+    },
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

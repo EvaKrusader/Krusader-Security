@@ -3,7 +3,7 @@
     {
       "name": "Digicode",
       "type": "block",
-      "sortid": 2,
+      "sortid": 1,
       "compiles": true,
       "locked_code": false,
       "registry_name": "digicode",
@@ -21,7 +21,7 @@
     {
       "name": "DigicodeInterface",
       "type": "gui",
-      "sortid": 1,
+      "sortid": 9,
       "compiles": true,
       "locked_code": false,
       "registry_name": "digicode_interface",
@@ -37,7 +37,7 @@
     {
       "name": "OnButton1Clicked",
       "type": "procedure",
-      "sortid": 4,
+      "sortid": 10,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_1_clicked",
@@ -69,7 +69,7 @@
     {
       "name": "OnButton2Clicked",
       "type": "procedure",
-      "sortid": 5,
+      "sortid": 11,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_2_clicked",
@@ -101,7 +101,7 @@
     {
       "name": "OnButton3Clicked",
       "type": "procedure",
-      "sortid": 6,
+      "sortid": 12,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_3_clicked",
@@ -133,7 +133,7 @@
     {
       "name": "OnButton4Clicked",
       "type": "procedure",
-      "sortid": 7,
+      "sortid": 13,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_4_clicked",
@@ -165,7 +165,7 @@
     {
       "name": "OnButton5Clicked",
       "type": "procedure",
-      "sortid": 8,
+      "sortid": 14,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_5_clicked",
@@ -197,7 +197,7 @@
     {
       "name": "OnButton6Clicked",
       "type": "procedure",
-      "sortid": 9,
+      "sortid": 15,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_6_clicked",
@@ -229,7 +229,7 @@
     {
       "name": "OnButton7Clicked",
       "type": "procedure",
-      "sortid": 10,
+      "sortid": 16,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_7_clicked",
@@ -261,7 +261,7 @@
     {
       "name": "OnButton8Clicked",
       "type": "procedure",
-      "sortid": 11,
+      "sortid": 17,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_8_clicked",
@@ -293,7 +293,7 @@
     {
       "name": "OnButton9Clicked",
       "type": "procedure",
-      "sortid": 12,
+      "sortid": 18,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_9_clicked",
@@ -325,7 +325,7 @@
     {
       "name": "OnButton0Clicked",
       "type": "procedure",
-      "sortid": 13,
+      "sortid": 19,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_0_clicked",
@@ -357,7 +357,7 @@
     {
       "name": "DigicodeBlockAdded",
       "type": "procedure",
-      "sortid": 14,
+      "sortid": 20,
       "compiles": true,
       "locked_code": false,
       "registry_name": "digicode_block_added",
@@ -393,7 +393,7 @@
     {
       "name": "ScreenShower",
       "type": "procedure",
-      "sortid": 15,
+      "sortid": 21,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_shower",
@@ -426,7 +426,7 @@
     {
       "name": "OnButtonXClicked",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 22,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_x_clicked",
@@ -458,7 +458,7 @@
     {
       "name": "OnButtonVClicked",
       "type": "procedure",
-      "sortid": 17,
+      "sortid": 23,
       "compiles": true,
       "locked_code": false,
       "registry_name": "on_button_v_clicked",
@@ -494,7 +494,7 @@
     {
       "name": "Screen2Stars",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 24,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_2_stars",
@@ -527,7 +527,7 @@
     {
       "name": "Screen3Stars",
       "type": "procedure",
-      "sortid": 19,
+      "sortid": 25,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_3_stars",
@@ -560,7 +560,7 @@
     {
       "name": "Screen4Stars",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 26,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_4_stars",
@@ -593,7 +593,7 @@
     {
       "name": "ScreenRed",
       "type": "procedure",
-      "sortid": 21,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_red",
@@ -626,7 +626,7 @@
     {
       "name": "ScreenGreen",
       "type": "procedure",
-      "sortid": 22,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_green",
@@ -659,7 +659,7 @@
     {
       "name": "DigicodeInterfaceThisGUIIsClosed",
       "type": "procedure",
-      "sortid": 23,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "digicode_interface_this_gui_is_closed",
@@ -691,7 +691,7 @@
     {
       "name": "Screen5Stars",
       "type": "procedure",
-      "sortid": 24,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "screen_5_stars",
@@ -724,7 +724,7 @@
     {
       "name": "DevDigicode",
       "type": "gui",
-      "sortid": 27,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dev_digicode",
@@ -740,7 +740,7 @@
     {
       "name": "WrenchRightclickedOnBlock",
       "type": "procedure",
-      "sortid": 28,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wrench_rightclicked_on_block",
@@ -780,7 +780,7 @@
     {
       "name": "DevDigicodeThisGUIIsOpened",
       "type": "procedure",
-      "sortid": 29,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dev_digicode_this_gui_is_opened",
@@ -812,7 +812,7 @@
     {
       "name": "DevDigicodeThisGUIIsClosed",
       "type": "procedure",
-      "sortid": 30,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dev_digicode_this_gui_is_closed",
@@ -844,7 +844,7 @@
     {
       "name": "Wrench",
       "type": "item",
-      "sortid": 31,
+      "sortid": 3,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wrench",
@@ -859,7 +859,7 @@
     {
       "name": "ShowButtons",
       "type": "procedure",
-      "sortid": 32,
+      "sortid": 35,
       "compiles": true,
       "locked_code": false,
       "registry_name": "show_buttons",
@@ -892,7 +892,7 @@
     {
       "name": "DevDigicodeWhileThisGUIIsOpenTick",
       "type": "procedure",
-      "sortid": 33,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dev_digicode_while_this_gui_is_open_tick",
@@ -912,7 +912,7 @@
     {
       "name": "Frame1Prod",
       "type": "procedure",
-      "sortid": 34,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frame_1_prod",
@@ -933,7 +933,7 @@
     {
       "name": "Frame2Prod",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frame_2_prod",
@@ -954,7 +954,7 @@
     {
       "name": "Frame3",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frame_3",
@@ -975,7 +975,7 @@
     {
       "name": "Frame4",
       "type": "procedure",
-      "sortid": 37,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frame_4",
@@ -996,7 +996,7 @@
     {
       "name": "Frame5",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frame_5",
@@ -1017,7 +1017,7 @@
     {
       "name": "Frame6",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frame_6",
@@ -1038,7 +1038,7 @@
     {
       "name": "GivePlayerCredentials",
       "type": "procedure",
-      "sortid": 40,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "give_player_credentials",
@@ -1052,12 +1052,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "GiveHintDigicodeRightclickedOnBlock",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "give_hint_digicode_rightclicked_on_block",
@@ -1093,7 +1094,7 @@
     {
       "name": "GiveHintDigicode",
       "type": "item",
-      "sortid": 42,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "registry_name": "give_hint_digicode",
@@ -1108,7 +1109,7 @@
     {
       "name": "OneTimePasscodeChange",
       "type": "item",
-      "sortid": 43,
+      "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "registry_name": "one_time_passcode_change",
@@ -1123,7 +1124,7 @@
     {
       "name": "GiveDigicodeReset",
       "type": "procedure",
-      "sortid": 44,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "give_digicode_reset",
@@ -1143,21 +1144,6 @@
         ]
       },
       "path": "~/Digicode"
-    },
-    {
-      "name": "PCLoging",
-      "type": "gui",
-      "sortid": 45,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pc_loging",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/krusader_security/world/inventory/PCLogingMenu.java",
-          "src/main/java/net/mcreator/krusader_security/client/gui/PCLogingScreen.java",
-          "src/main/java/net/mcreator/krusader_security/network/PCLogingButtonMessage.java"
-        ]
-      }
     },
     {
       "name": "LoginPC",
@@ -1180,29 +1166,13 @@
             "type": "map"
           }
         ]
-      }
-    },
-    {
-      "name": "PC",
-      "type": "block",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "pc",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/krusader_security/models/block/pc.json",
-          "src/main/resources/assets/krusader_security/blockstates/pc.json",
-          "src/main/java/net/mcreator/krusader_security/block/entity/PCBlockEntity.java",
-          "src/main/resources/assets/krusader_security/models/item/pc.json",
-          "src/main/java/net/mcreator/krusader_security/block/PCBlock.java"
-        ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "ShowLogsRightclickedOnBlock",
       "type": "procedure",
-      "sortid": 48,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "show_logs_rightclicked_on_block",
@@ -1238,7 +1208,7 @@
     {
       "name": "ShowLogs",
       "type": "item",
-      "sortid": 49,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "registry_name": "show_logs",
@@ -1253,7 +1223,7 @@
     {
       "name": "VersionCheck",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "version_check",
@@ -1273,7 +1243,7 @@
     {
       "name": "VersionCheckDate",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "version_check_date",
@@ -1293,7 +1263,7 @@
     {
       "name": "PCPasswordReset",
       "type": "gui",
-      "sortid": 52,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_password_reset",
@@ -1303,12 +1273,13 @@
           "src/main/java/net/mcreator/krusader_security/network/PCPasswordResetButtonMessage.java",
           "src/main/java/net/mcreator/krusader_security/client/gui/PCPasswordResetScreen.java"
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PasswordResetProd",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "password_reset_prod",
@@ -1338,12 +1309,13 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PasswordResetter",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "password_resetter",
@@ -1361,12 +1333,13 @@
             "type": "map"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PCLoginAnimProd",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_login_anim_prod",
@@ -1380,12 +1353,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim1",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_1",
@@ -1400,12 +1374,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim2",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_2",
@@ -1420,12 +1395,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim3",
       "type": "procedure",
-      "sortid": 58,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_3",
@@ -1440,12 +1416,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim4",
       "type": "procedure",
-      "sortid": 59,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_4",
@@ -1460,12 +1437,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim5",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_5",
@@ -1480,12 +1458,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim6",
       "type": "procedure",
-      "sortid": 61,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_6",
@@ -1500,12 +1479,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim7",
       "type": "procedure",
-      "sortid": 62,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_7",
@@ -1520,12 +1500,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PcAnim8",
       "type": "procedure",
-      "sortid": 63,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_anim_8",
@@ -1540,12 +1521,13 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "ReturnToLogin",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "return_to_login",
@@ -1575,12 +1557,13 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "PCBlockstates",
       "type": "blockstates",
-      "sortid": 65,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pc_blockstates",
@@ -1588,12 +1571,13 @@
         "files": [
           "src/main/resources/assets/krusader_security/models/block/pc_blockstates_blockstate_0.json"
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "CrepercRightclickedOnBlock",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "creperc_rightclicked_on_block",
@@ -1627,12 +1611,13 @@
             "type": "world"
           }
         ]
-      }
+      },
+      "path": "~/Computer"
     },
     {
       "name": "Creperc",
       "type": "item",
-      "sortid": 67,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "creperc",
@@ -1641,7 +1626,270 @@
           "src/main/java/net/mcreator/krusader_security/item/CrepercItem.java",
           "src/main/resources/assets/krusader_security/models/item/creperc.json"
         ]
-      }
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "Terminal",
+      "type": "block",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "terminal",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/block/TerminalBlock.java",
+          "src/main/resources/assets/krusader_security/models/block/terminal.json",
+          "src/main/java/net/mcreator/krusader_security/block/entity/TerminalBlockEntity.java",
+          "src/main/resources/assets/krusader_security/blockstates/terminal.json",
+          "src/main/resources/assets/krusader_security/models/item/terminal.json"
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "WhatAdSpace",
+      "type": "procedure",
+      "sortid": 65,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "what_ad_space",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/WhatAdSpaceProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "AdspaceLazarus",
+      "type": "procedure",
+      "sortid": 66,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adspace_lazarus",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/AdspaceLazarusProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "PCLogingThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 67,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pc_loging_this_gui_is_opened",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/PCLogingThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "DigicodeEmittedRedstonePower",
+      "type": "procedure",
+      "sortid": 68,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_emitted_redstone_power",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeEmittedRedstonePowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeInterfaceThisGUIIsOpened",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_interface_this_gui_is_opened",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeInterfaceThisGUIIsOpenedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "Computer",
+      "type": "block",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "computer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/blockstates/computer.json",
+          "src/main/java/net/mcreator/krusader_security/block/entity/ComputerBlockEntity.java",
+          "src/main/java/net/mcreator/krusader_security/block/ComputerBlock.java",
+          "src/main/resources/assets/krusader_security/models/item/computer.json",
+          "src/main/resources/assets/krusader_security/models/block/computer.json"
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "ComputerLogin",
+      "type": "gui",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "computer_login",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/network/ComputerLoginButtonMessage.java",
+          "src/main/java/net/mcreator/krusader_security/world/inventory/ComputerLoginMenu.java",
+          "src/main/java/net/mcreator/krusader_security/client/gui/ComputerLoginScreen.java"
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "AdspaceThalp",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adspace_thalp",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/AdspaceThalpProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Computer"
+    },
+    {
+      "name": "DigicodeBlockDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_block_destroyed_by_player",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeBlockDestroyedByPlayerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "blockstate",
+            "type": "blockstate"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeBlockstates",
+      "type": "blockstates",
+      "sortid": 73,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_blockstates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_0.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_6.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_11.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_3.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_9.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_1.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_5.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_2.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_4.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_7.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_8.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_blockstates_blockstate_10.json"
+        ]
+      },
+      "path": "~/Digicode"
     }
   ],
   "variable_elements": [
@@ -1734,30 +1982,40 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0.0"
+    },
+    {
+      "name": "pcAdSpace",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "\"\""
     }
   ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
       "gui.gensec.pc_loging.label_password": "Password :",
+      "block.krusader_security.terminal": "Terminal",
       "gui.digicode.digicode.button_71": "7",
       "item.krusader_security.wrench": "Wrench",
       "item.krusader_security.one_time_passcode_change": "One Time Passcode Change",
       "gui.krusader_security.pc_password_reset.OldPassword": "Enter Old Password",
+      "block.krusader_security.computer": "Computer",
+      "gui.krusader_security.computer_login.label_username": "Username :",
       "gui.digicode.digicode.button_81": "8",
-      "gui.krusader_security.pc_loging.label_password": "Password :",
       "gui.digicode.digicode.button_x": "X",
       "gui.digicode.digicode.button_v": "V",
       "gui.digicode.digicode.button_01": "0",
-      "gui.krusader_security.pc_loging.Username": "Insert Username",
+      "gui.krusader_security.computer_login.button_log_in": "Log in",
       "gui.gensec.pc_loging.Password": "Insert Password",
       "item.gensec.give_hint_digicode": "Give Hint Digicode",
       "item.krusader_security.creperc": "Creperc",
+      "gui.krusader_security.computer_login.Username": "Insert Username",
       "gui.digicode.digicode.button_91": "9",
       "gui.digicode.digicode.button_11": "1",
       "gui.krusader_security.pc_password_reset.button_reset": "Reset",
       "gui.digicode.digicode.button_1": "1",
       "gui.digicode.digicode.button_0": "0",
+      "gui.krusader_security.computer_login.Password": "Insert Password",
       "gui.digicode.digicode.button_9": "9",
       "gui.digicode.digicode.button_8": "8",
       "gui.digicode.digicode.button_7": "7",
@@ -1797,15 +2055,14 @@
       "gui.digicode.digicode.button_41": "4",
       "gui.gensec.pc_password_reset.OldPassword": "Enter Old Password",
       "gui.gensec.pc_loging.button_reset": "Reset",
-      "gui.krusader_security.pc_loging.button_reset": "Reset",
       "gui.krusader_security.pc_password_reset.label_old_password": "Old Password :",
       "gui.gensec.pc_password_reset.button_reset_password": "Reset Password",
       "item.gensec.wrench": "Wrench",
       "gui.krusader_security.dev_digicode.button_3": "3",
-      "gui.krusader_security.pc_loging.button_log_in": "Log in",
       "gui.krusader_security.dev_digicode.button_2": "2",
       "gui.krusader_security.dev_digicode.button_1": "1",
       "gui.krusader_security.dev_digicode.button_0": "0",
+      "gui.krusader_security.computer_login.label_password": "Password :",
       "gui.digicode.digicode.button_51": "5",
       "block.gensec.digicode": "Digicode",
       "gui.krusader_security.pc_password_reset.NewPassword": "Enter New Password",
@@ -1818,7 +2075,6 @@
       "gui.krusader_security.digicode_interface.button_6": "6",
       "gui.gensec.digicode_interface.button_3": "3",
       "gui.krusader_security.digicode_interface.button_5": "5",
-      "block.krusader_security.pc": "Computer",
       "gui.gensec.digicode_interface.button_4": "4",
       "gui.krusader_security.digicode_interface.button_4": "4",
       "gui.gensec.digicode_interface.button_1": "1",
@@ -1832,16 +2088,15 @@
       "gui.krusader_security.digicode_interface.button_2": "2",
       "gui.gensec.digicode_interface.button_7": "7",
       "gui.krusader_security.digicode_interface.button_1": "1",
-      "gui.krusader_security.pc_loging.Password": "Insert Password",
       "gui.gensec.digicode_interface.button_8": "8",
       "gui.krusader_security.digicode_interface.button_0": "0",
+      "gui.krusader_security.computer_login.button_reset": "Reset",
       "gui.digicode.digicode.button_61": "6",
       "item.gensec.show_logs": "Show Logs",
       "gui.gensec.pc_password_reset.NewPassword": "Enter New Password",
       "gui.gensec.pc_loging.button_log_in": "Log in",
       "gui.gensec.pc_loging.Core": "",
       "item.krusader_security.show_logs": "Show Logs",
-      "gui.krusader_security.pc_loging.label_username": "Username :",
       "block.gensec.pc": "Computer"
     }
   },
@@ -1854,6 +2109,10 @@
       },
       {
         "name": "Dev",
+        "children": []
+      },
+      {
+        "name": "Computer",
         "children": []
       }
     ]

@@ -2,10 +2,10 @@
   "_fv": 57,
   "_type": "blockstates",
   "definition": {
-    "block": "PC",
+    "block": "Computer",
     "blockstateList": [
       {
-        "texture": "carpettrap",
+        "texture": "computer_body_creeper",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",

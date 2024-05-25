@@ -79,6 +79,7 @@ public class KrusaderSecurityModVariables {
 			clone.currentDateNum = original.currentDateNum;
 			clone.login_anim = original.login_anim;
 			clone.whatPcAnim = original.whatPcAnim;
+			clone.pcAdSpace = original.pcAdSpace;
 			if (!event.isWasDeath()) {
 				clone.isLoggedIn = original.isLoggedIn;
 				clone.sendOutMessage = original.sendOutMessage;
@@ -132,6 +133,7 @@ public class KrusaderSecurityModVariables {
 		public double currentDateNum = 0;
 		public double login_anim = 0.0;
 		public double whatPcAnim = 0.0;
+		public String pcAdSpace = "\"\"";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -155,6 +157,7 @@ public class KrusaderSecurityModVariables {
 			nbt.putDouble("currentDateNum", currentDateNum);
 			nbt.putDouble("login_anim", login_anim);
 			nbt.putDouble("whatPcAnim", whatPcAnim);
+			nbt.putString("pcAdSpace", pcAdSpace);
 			return nbt;
 		}
 
@@ -175,6 +178,7 @@ public class KrusaderSecurityModVariables {
 			currentDateNum = nbt.getDouble("currentDateNum");
 			login_anim = nbt.getDouble("login_anim");
 			whatPcAnim = nbt.getDouble("whatPcAnim");
+			pcAdSpace = nbt.getString("pcAdSpace");
 		}
 	}
 
@@ -214,6 +218,7 @@ public class KrusaderSecurityModVariables {
 					variables.currentDateNum = message.data.currentDateNum;
 					variables.login_anim = message.data.login_anim;
 					variables.whatPcAnim = message.data.whatPcAnim;
+					variables.pcAdSpace = message.data.pcAdSpace;
 				}
 			});
 			context.setPacketHandled(true);
