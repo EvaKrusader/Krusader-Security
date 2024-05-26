@@ -31,6 +31,9 @@ public class KrusaderSecurityModTabs {
 			tabData.accept(KrusaderSecurityModItems.CREPERC.get());
 			tabData.accept(KrusaderSecurityModBlocks.TERMINAL.get().asItem());
 			tabData.accept(KrusaderSecurityModBlocks.COMPUTER.get().asItem());
+			tabData.accept(KrusaderSecurityModItems.JAMMER_IMPROVISED.get());
+			tabData.accept(KrusaderSecurityModItems.JAMMER_NORMAL.get());
+			tabData.accept(KrusaderSecurityModItems.JAMMER_ELITE.get());
 		}
 	}
 }

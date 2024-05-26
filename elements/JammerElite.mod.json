@@ -3,11 +3,11 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "test1_pickaxe",
+    "texture": "genseccard3",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Spell of Overseeing",
+    "name": "Elite Jammer",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "REDSTONE"
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "This spell shows the last 5 hints and tries of a digicode."
+        "This Elite Jammer will jam Digicodes 99% of the time."
       ]
     },
     "glowCondition": {
@@ -37,9 +37,6 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onRightClickedOnBlock": {
-      "name": "ShowLogsRightclickedOnBlock"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {

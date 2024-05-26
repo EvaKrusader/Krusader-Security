@@ -22,7 +22,7 @@ public class CrepercRightclickedOnBlockProcedure {
 						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
 				{
-					String _setval = "lazarus";
+					String _setval = "telecom";
 					entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.pcAdSpace = _setval;
 						capability.syncPlayerVariables(entity);

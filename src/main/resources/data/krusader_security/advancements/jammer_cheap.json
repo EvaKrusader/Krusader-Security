@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "item": "krusader_security:jammer_improvised"
+    },
+    "title": {
+      "translate": "advancements.jammer_cheap.title"
+    },
+    "description": {
+      "translate": "advancements.jammer_cheap.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": true
+  },
+  "criteria": {
+    "jammer_cheap": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "krusader_security:wizard"
+}

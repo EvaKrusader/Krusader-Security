@@ -22,8 +22,8 @@ public class OneTimePasscodeChangeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("This allows you to set a custom 4-digit passcode to your digicode."));
-		list.add(Component.literal("This item is single-use, so be careful with it"));
+		list.add(Component.literal("This spell allows you to set a custom 4-digit passcode to your digicode."));
+		list.add(Component.literal("This spell is single-use, so be careful with it."));
 	}
 
 	@Override

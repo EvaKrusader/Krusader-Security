@@ -232,6 +232,31 @@
           "x": 204,
           "y": 126
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adspace_telecom.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "AdspaceTelecom"
+          },
+          "x": 204,
+          "y": 126
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_adspacebutton",
+          "image": "adspacebutton.png",
+          "hoveredImage": "",
+          "onClick": {
+            "name": "ClickedButtonAdspace"
+          },
+          "x": 204,
+          "y": 126
+        }
       }
     ],
     "onOpen": {

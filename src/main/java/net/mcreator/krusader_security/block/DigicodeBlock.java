@@ -11,7 +11,6 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -46,7 +45,6 @@ import net.minecraft.core.BlockPos;
 
 import net.mcreator.krusader_security.world.inventory.DigicodeInterfaceMenu;
 import net.mcreator.krusader_security.procedures.DigicodeEmittedRedstonePowerProcedure;
-import net.mcreator.krusader_security.procedures.DigicodeBlockDestroyedByPlayerProcedure;
 import net.mcreator.krusader_security.procedures.DigicodeBlockAddedProcedure;
 import net.mcreator.krusader_security.block.entity.DigicodeBlockEntity;
 
@@ -361,13 +359,6 @@ public class DigicodeBlock extends Block implements EntityBlock {
 	@Override
 	public boolean canConnectRedstone(BlockState state, BlockGetter world, BlockPos pos, Direction side) {
 		return true;
-	}
-
-	@Override
-	public boolean onDestroyedByPlayer(BlockState blockstate, Level world, BlockPos pos, Player entity, boolean willHarvest, FluidState fluid) {
-		boolean retval = super.onDestroyedByPlayer(blockstate, world, pos, entity, willHarvest, fluid);
-		DigicodeBlockDestroyedByPlayerProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
-		return retval;
 	}
 
 	@Override

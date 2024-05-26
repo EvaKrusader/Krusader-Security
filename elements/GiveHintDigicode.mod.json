@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Give Hint Digicode",
+    "name": "Spell of Insight",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "REDSTONE"
@@ -27,7 +27,9 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [
+        "This spell shows you a digit of the password of a digicode."
+      ]
     },
     "glowCondition": {
       "fixedValue": false

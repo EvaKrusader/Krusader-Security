@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "One Time Passcode Change",
+    "name": "Spell of Installation",
     "rarity": "COMMON",
     "creativeTab": {
       "value": "REDSTONE"
@@ -28,8 +28,8 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "This allows you to set a custom 4-digit passcode to your digicode.",
-        "This item is single-use, so be careful with it"
+        "This spell allows you to set a custom 4-digit passcode to your digicode.",
+        "This spell is single-use, so be careful with it."
       ]
     },
     "glowCondition": {

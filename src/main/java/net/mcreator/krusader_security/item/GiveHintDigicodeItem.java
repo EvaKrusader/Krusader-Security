@@ -22,6 +22,7 @@ public class GiveHintDigicodeItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
+		list.add(Component.literal("This spell shows you a digit of the password of a digicode."));
 	}
 
 	@Override

@@ -33,6 +33,7 @@ public class GiveHintDigicodeRightclickedOnBlockProcedure {
 		String daysString = "";
 		String monthsStrings = "";
 		String yearsString = "";
+		String asterisk = "";
 		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == KrusaderSecurityModBlocks.DIGICODE.get()) {
 			if (entity.isShiftKeyDown()) {
 				randomDigit = Mth.nextInt(RandomSource.create(), 1, (int) (new Object() {
@@ -43,111 +44,222 @@ public class GiveHintDigicodeRightclickedOnBlockProcedure {
 						return "";
 					}
 				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).length());
-				if (randomDigit == 1) {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(((new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "***")), true);
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("whatHint", ((new Object() {
-								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getString(tag);
-									return "";
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "***"));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				if ((new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
 					}
-				} else if (randomDigit == 2) {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("*" + (new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "**")), true);
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("whatHint", ("*" + (new Object() {
-								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getString(tag);
-									return "";
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "**"));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).length() == 1) {
+					if (randomDigit == 1) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ((new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit)));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 					}
-				} else if (randomDigit == 3) {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("**" + (new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "*")), true);
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("whatHint", ("**" + (new Object() {
-								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getString(tag);
-									return "";
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "*"));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				} else if ((new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
 					}
-				} else if (randomDigit == 4) {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("***" + (new Object() {
-							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-								BlockEntity blockEntity = world.getBlockEntity(pos);
-								if (blockEntity != null)
-									return blockEntity.getPersistentData().getString(tag);
-								return "";
-							}
-						}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit))), true);
-					if (!world.isClientSide()) {
-						BlockPos _bp = BlockPos.containing(x, y, z);
-						BlockEntity _blockEntity = world.getBlockEntity(_bp);
-						BlockState _bs = world.getBlockState(_bp);
-						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("whatHint", ("***" + (new Object() {
-								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-									BlockEntity blockEntity = world.getBlockEntity(pos);
-									if (blockEntity != null)
-										return blockEntity.getPersistentData().getString(tag);
-									return "";
-								}
-							}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit)));
-						if (world instanceof Level _level)
-							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).length() == 2) {
+					if (randomDigit == 1) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ((new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "*"));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					} else if (randomDigit == 2) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ("*" + (new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit)));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					}
+				} else if ((new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).length() == 3) {
+					if (randomDigit == 1) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ((new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "**"));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					} else if (randomDigit == 2) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ("*" + (new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "*"));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					} else if (randomDigit == 3) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ("**" + (new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit)));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					}
+				} else if ((new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).length() == 4) {
+					if (randomDigit == 1) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ((new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "***"));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					} else if (randomDigit == 2) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ("*" + (new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "**"));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					} else if (randomDigit == 3) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ("**" + (new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit) + "*"));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
+					} else if (randomDigit == 4) {
+						if (!world.isClientSide()) {
+							BlockPos _bp = BlockPos.containing(x, y, z);
+							BlockEntity _blockEntity = world.getBlockEntity(_bp);
+							BlockState _bs = world.getBlockState(_bp);
+							if (_blockEntity != null)
+								_blockEntity.getPersistentData().putString("whatHint", ("***" + (new Object() {
+									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+										BlockEntity blockEntity = world.getBlockEntity(pos);
+										if (blockEntity != null)
+											return blockEntity.getPersistentData().getString(tag);
+										return "";
+									}
+								}.getValue(world, BlockPos.containing(x, y, z), "realPassword")).substring((int) (randomDigit - 1), (int) randomDigit)));
+							if (world instanceof Level _level)
+								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+						}
 					}
 				}
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal((new Object() {
+						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+							BlockEntity blockEntity = world.getBlockEntity(pos);
+							if (blockEntity != null)
+								return blockEntity.getPersistentData().getString(tag);
+							return "";
+						}
+					}.getValue(world, BlockPos.containing(x, y, z), "whatHint"))), true);
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -206,7 +318,7 @@ public class GiveHintDigicodeRightclickedOnBlockProcedure {
 									return blockEntity.getPersistentData().getDouble(tag);
 								return -1;
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "howManyHints"))), ("HINT : " + ("<" + entity.getDisplayName().getString() + ">") + (" got " + "[" + (new Object() {
+						}.getValue(world, BlockPos.containing(x, y, z), "howManyHints"))), ("H : " + ("<" + entity.getDisplayName().getString() + ">") + (" got " + "[" + (new Object() {
 							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
 								if (blockEntity != null)

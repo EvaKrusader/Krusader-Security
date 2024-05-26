@@ -15,6 +15,9 @@ import net.minecraft.world.item.BlockItem;
 import net.mcreator.krusader_security.item.WrenchItem;
 import net.mcreator.krusader_security.item.ShowLogsItem;
 import net.mcreator.krusader_security.item.OneTimePasscodeChangeItem;
+import net.mcreator.krusader_security.item.JammerNormalItem;
+import net.mcreator.krusader_security.item.JammerImprovisedItem;
+import net.mcreator.krusader_security.item.JammerEliteItem;
 import net.mcreator.krusader_security.item.GiveHintDigicodeItem;
 import net.mcreator.krusader_security.item.CrepercItem;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
@@ -29,6 +32,9 @@ public class KrusaderSecurityModItems {
 	public static final RegistryObject<Item> CREPERC = REGISTRY.register("creperc", () -> new CrepercItem());
 	public static final RegistryObject<Item> TERMINAL = block(KrusaderSecurityModBlocks.TERMINAL);
 	public static final RegistryObject<Item> COMPUTER = block(KrusaderSecurityModBlocks.COMPUTER);
+	public static final RegistryObject<Item> JAMMER_IMPROVISED = REGISTRY.register("jammer_improvised", () -> new JammerImprovisedItem());
+	public static final RegistryObject<Item> JAMMER_NORMAL = REGISTRY.register("jammer_normal", () -> new JammerNormalItem());
+	public static final RegistryObject<Item> JAMMER_ELITE = REGISTRY.register("jammer_elite", () -> new JammerEliteItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 import net.mcreator.krusader_security.world.inventory.ComputerLoginMenu;
 import net.mcreator.krusader_security.procedures.PasswordResetProdProcedure;
 import net.mcreator.krusader_security.procedures.LoginPCProcedure;
+import net.mcreator.krusader_security.procedures.ClickedButtonAdspaceProcedure;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
 import java.util.function.Supplier;
@@ -70,6 +71,10 @@ public class ComputerLoginButtonMessage {
 		if (buttonID == 1) {
 
 			LoginPCProcedure.execute(entity, guistate);
+		}
+		if (buttonID == 2) {
+
+			ClickedButtonAdspaceProcedure.execute(entity);
 		}
 	}
 

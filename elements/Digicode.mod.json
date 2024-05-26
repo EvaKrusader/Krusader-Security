@@ -273,9 +273,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onDestroyedByPlayer": {
-      "name": "DigicodeBlockDestroyedByPlayer"
-    },
     "onBlockPlayedBy": {
       "name": "DigicodeBlockAdded"
     },

@@ -7,8 +7,12 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
+import net.minecraft.advancements.AdvancementProgress;
+import net.minecraft.advancements.Advancement;
 
 import java.util.Calendar;
 
@@ -204,6 +208,14 @@ public class OnButtonVClickedProcedure {
 						return "";
 					}
 				}.getValue(world, BlockPos.containing(x, y, z), "realPassword")))), true);
+			if (entity instanceof ServerPlayer _player) {
+				Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("krusader_security:wizard"));
+				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
+				if (!_ap.isDone()) {
+					for (String criteria : _ap.getRemainingCriteria())
+						_player.getAdvancements().award(_adv, criteria);
+				}
+			}
 		} else {
 			if ((new Object() {
 				public String getValue(LevelAccessor world, BlockPos pos, String tag) {
@@ -283,45 +295,95 @@ public class OnButtonVClickedProcedure {
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
 			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("howManyUses", (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "howManyUses") + 1));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putString(("use" + new java.text.DecimalFormat("###").format(new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "howManyUses"))), ("TRY : " + ("<" + entity.getDisplayName().getString() + ">") + (" got " + "[" + (new Object() {
-						public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getString(tag);
-							return "";
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "typingPassword")) + "]") + " at " + ((hoursString + ":") + "" + (minutesString + ":") + secondsString) + " on "
-							+ ((daysString + "/") + "" + (monthsStrings + "/") + new java.text.DecimalFormat("####").format(Calendar.getInstance().get(Calendar.YEAR)))));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			if ((new Object() {
+				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+					BlockEntity blockEntity = world.getBlockEntity(pos);
+					if (blockEntity != null)
+						return blockEntity.getPersistentData().getBoolean(tag);
+					return false;
+				}
+			}.getValue(world, BlockPos.containing(x, y, z), "justJammed")) == false) {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("howManyUses", (new Object() {
+							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "howManyUses") + 1));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if ((new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "typingPassword")).equals(new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "realPassword"))) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString(("use" + new java.text.DecimalFormat("###").format(new Object() {
+								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "howManyUses"))), ("T : " + ("<" + entity.getDisplayName().getString() + ">") + (" tried " + "[\u00A7a" + (new Object() {
+								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getString(tag);
+									return "";
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "typingPassword")) + "\u00A7f]") + " at " + ((hoursString + ":") + "" + (minutesString + ":") + secondsString) + " on "
+									+ ((daysString + "/") + "" + (monthsStrings + "/") + new java.text.DecimalFormat("####").format(Calendar.getInstance().get(Calendar.YEAR)))));
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				} else {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString(("use" + new java.text.DecimalFormat("###").format(new Object() {
+								public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getDouble(tag);
+									return -1;
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "howManyUses"))), ("T : " + ("<" + entity.getDisplayName().getString() + ">") + (" tried " + "[\u00A7c" + (new Object() {
+								public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+									BlockEntity blockEntity = world.getBlockEntity(pos);
+									if (blockEntity != null)
+										return blockEntity.getPersistentData().getString(tag);
+									return "";
+								}
+							}.getValue(world, BlockPos.containing(x, y, z), "typingPassword")) + "\u00A7f]") + " at " + ((hoursString + ":") + "" + (minutesString + ":") + secondsString) + " on "
+									+ ((daysString + "/") + "" + (monthsStrings + "/") + new java.text.DecimalFormat("####").format(Calendar.getInstance().get(Calendar.YEAR)))));
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				}
 			}
 		}
 		if ((new Object() {

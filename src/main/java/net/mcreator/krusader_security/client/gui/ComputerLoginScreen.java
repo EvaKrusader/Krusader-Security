@@ -6,6 +6,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.EditBox;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
@@ -21,6 +22,7 @@ import net.mcreator.krusader_security.procedures.PcAnim3Procedure;
 import net.mcreator.krusader_security.procedures.PcAnim2Procedure;
 import net.mcreator.krusader_security.procedures.PcAnim1Procedure;
 import net.mcreator.krusader_security.procedures.AdspaceThalpProcedure;
+import net.mcreator.krusader_security.procedures.AdspaceTelecomProcedure;
 import net.mcreator.krusader_security.procedures.AdspaceLazarusProcedure;
 import net.mcreator.krusader_security.network.ComputerLoginButtonMessage;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
@@ -38,6 +40,7 @@ public class ComputerLoginScreen extends AbstractContainerScreen<ComputerLoginMe
 	EditBox Password;
 	Button button_reset;
 	Button button_log_in;
+	ImageButton imagebutton_adspacebutton;
 
 	public ComputerLoginScreen(ComputerLoginMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -99,6 +102,9 @@ public class ComputerLoginScreen extends AbstractContainerScreen<ComputerLoginMe
 		}
 		if (AdspaceThalpProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/adspace_thalp.png"), this.leftPos + 118, this.topPos + 89, 0, 0, 120, 36, 120, 36);
+		}
+		if (AdspaceTelecomProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/adspace_telecom.png"), this.leftPos + 118, this.topPos + 89, 0, 0, 120, 36, 120, 36);
 		}
 		RenderSystem.disableBlend();
 	}
@@ -199,5 +205,13 @@ public class ComputerLoginScreen extends AbstractContainerScreen<ComputerLoginMe
 		}).bounds(this.leftPos + 181, this.topPos + 133, 56, 20).build();
 		guistate.put("button:button_log_in", button_log_in);
 		this.addRenderableWidget(button_log_in);
+		imagebutton_adspacebutton = new ImageButton(this.leftPos + 118, this.topPos + 89, 120, 36, 0, 0, 36, new ResourceLocation("krusader_security:textures/screens/atlas/imagebutton_adspacebutton.png"), 120, 72, e -> {
+			if (true) {
+				KrusaderSecurityMod.PACKET_HANDLER.sendToServer(new ComputerLoginButtonMessage(2, x, y, z));
+				ComputerLoginButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_adspacebutton", imagebutton_adspacebutton);
+		this.addRenderableWidget(imagebutton_adspacebutton);
 	}
 }
