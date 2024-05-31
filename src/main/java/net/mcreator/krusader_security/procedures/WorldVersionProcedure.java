@@ -70,7 +70,8 @@ public class WorldVersionProcedure {
 							}
 							return 0;
 						}
-					}.convert(Math.round(json.get("ver1").getAsDouble()) + "" + Math.round(json.get("ver2").getAsDouble()) + Math.round(json.get("ver3").getAsDouble()));
+					}.convert(new java.text.DecimalFormat("##.##").format(Math.round(json.get("ver1").getAsDouble())) + "" + new java.text.DecimalFormat("##.##").format(Math.round(json.get("ver2").getAsDouble()))
+							+ new java.text.DecimalFormat("##.##").format(Math.round(json.get("ver3").getAsDouble())));
 					{
 						double _setval = KrusaderSecurityModVariables.whatWorldVersionSession;
 						entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -86,7 +87,7 @@ public class WorldVersionProcedure {
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(
 					Component.literal(
-							(new java.text.DecimalFormat("##.##").format((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).whatWorldVersionPlayerLock))),
+							(new java.text.DecimalFormat("###").format((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).whatWorldVersionPlayerLock))),
 					false);
 	}
 }
