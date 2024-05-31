@@ -257,6 +257,18 @@
           "x": 204,
           "y": 126
         }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "adspace_marble.png",
+          "use1Xscale": true,
+          "displayCondition": {
+            "name": "AdspaceMarble"
+          },
+          "x": 204,
+          "y": 126
+        }
       }
     ],
     "onOpen": {

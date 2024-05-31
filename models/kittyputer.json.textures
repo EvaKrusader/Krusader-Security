@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "screen": "computer_screen",
+        "body": "computer_body_kitty"
+      },
+      "name": "default"
+    }
+  }
+}

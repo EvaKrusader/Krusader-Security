@@ -31,6 +31,8 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class KrusaderSecurityModVariables {
+	public static double whatWorldVersionSession = 0;
+
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		KrusaderSecurityMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
@@ -80,6 +82,7 @@ public class KrusaderSecurityModVariables {
 			clone.login_anim = original.login_anim;
 			clone.whatPcAnim = original.whatPcAnim;
 			clone.pcAdSpace = original.pcAdSpace;
+			clone.whatWorldVersionPlayerLock = original.whatWorldVersionPlayerLock;
 			if (!event.isWasDeath()) {
 				clone.isLoggedIn = original.isLoggedIn;
 				clone.sendOutMessage = original.sendOutMessage;
@@ -134,6 +137,7 @@ public class KrusaderSecurityModVariables {
 		public double login_anim = 0.0;
 		public double whatPcAnim = 0.0;
 		public String pcAdSpace = "\"\"";
+		public double whatWorldVersionPlayerLock = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -158,6 +162,7 @@ public class KrusaderSecurityModVariables {
 			nbt.putDouble("login_anim", login_anim);
 			nbt.putDouble("whatPcAnim", whatPcAnim);
 			nbt.putString("pcAdSpace", pcAdSpace);
+			nbt.putDouble("whatWorldVersionPlayerLock", whatWorldVersionPlayerLock);
 			return nbt;
 		}
 
@@ -179,6 +184,7 @@ public class KrusaderSecurityModVariables {
 			login_anim = nbt.getDouble("login_anim");
 			whatPcAnim = nbt.getDouble("whatPcAnim");
 			pcAdSpace = nbt.getString("pcAdSpace");
+			whatWorldVersionPlayerLock = nbt.getDouble("whatWorldVersionPlayerLock");
 		}
 	}
 
@@ -219,6 +225,7 @@ public class KrusaderSecurityModVariables {
 					variables.login_anim = message.data.login_anim;
 					variables.whatPcAnim = message.data.whatPcAnim;
 					variables.pcAdSpace = message.data.pcAdSpace;
+					variables.whatWorldVersionPlayerLock = message.data.whatWorldVersionPlayerLock;
 				}
 			});
 			context.setPacketHandled(true);

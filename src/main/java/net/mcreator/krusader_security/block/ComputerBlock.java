@@ -49,13 +49,15 @@ import java.util.Collections;
 import io.netty.buffer.Unpooled;
 
 public class ComputerBlock extends Block implements EntityBlock {
-	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 2);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public ComputerBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.LADDER).strength(1f, 10f).lightLevel(s -> (new Object() {
 			public int getLightLevel() {
 				if (s.getValue(BLOCKSTATE) == 1)
+					return 0;
+				if (s.getValue(BLOCKSTATE) == 2)
 					return 0;
 				return 0;
 			}
@@ -95,6 +97,22 @@ public class ComputerBlock extends Block implements EntityBlock {
 					Shapes.or(box(5, 0, 4, 11, 0.5, 12), box(7, 0, 6.75, 9.5, 2.5, 9.25), box(5, 3, 4, 11, 10, 12), box(4, 2, 3, 12, 3, 13), box(4, 10, 3, 12, 11, 13), box(5, 3, 3, 12, 10, 4), box(5, 3, 12, 12, 10, 13), box(4, 3, 3, 5, 10, 13));
 				case WEST ->
 					Shapes.or(box(5, 0, 4, 11, 0.5, 12), box(6.5, 0, 6.75, 9, 2.5, 9.25), box(5, 3, 4, 11, 10, 12), box(4, 2, 3, 12, 3, 13), box(4, 10, 3, 12, 11, 13), box(4, 3, 12, 11, 10, 13), box(4, 3, 3, 11, 10, 4), box(11, 3, 3, 12, 10, 13));
+			};
+		}
+		if (state.getValue(BLOCKSTATE) == 2) {
+			return switch (state.getValue(FACING)) {
+				default -> Shapes.or(box(4, 2.5, 5, 12, 9.5, 11), box(3, 1.5, 4, 13, 2.5, 12), box(3, 9.5, 4, 13, 10.5, 12), box(10, 10.5, 9, 12, 12.5, 10), box(4, 10.5, 9, 6, 12.5, 10), box(7, 4, 2, 9, 5.5, 4), box(12, 2.5, 5, 13, 9.5, 12),
+						box(3, 2.5, 5, 4, 9.5, 12), box(3, 2.5, 4, 13, 9.5, 5), box(4.25, 0, 5.25, 5.75, 1.5, 6.75), box(4, 0, 5, 6, 0.5, 7), box(10.25, 0, 5.25, 11.75, 1.5, 6.75), box(10, 0, 5, 12, 0.5, 7), box(4.25, 0, 9.25, 5.75, 1.5, 10.75),
+						box(4, 0, 9, 6, 0.5, 11), box(10.25, 0, 9.25, 11.75, 1.5, 10.75), box(10, 0, 9, 12, 0.5, 11));
+				case NORTH -> Shapes.or(box(4, 2.5, 5, 12, 9.5, 11), box(3, 1.5, 4, 13, 2.5, 12), box(3, 9.5, 4, 13, 10.5, 12), box(4, 10.5, 6, 6, 12.5, 7), box(10, 10.5, 6, 12, 12.5, 7), box(7, 4, 12, 9, 5.5, 14), box(3, 2.5, 4, 4, 9.5, 11),
+						box(12, 2.5, 4, 13, 9.5, 11), box(3, 2.5, 11, 13, 9.5, 12), box(10.25, 0, 9.25, 11.75, 1.5, 10.75), box(10, 0, 9, 12, 0.5, 11), box(4.25, 0, 9.25, 5.75, 1.5, 10.75), box(4, 0, 9, 6, 0.5, 11),
+						box(10.25, 0, 5.25, 11.75, 1.5, 6.75), box(10, 0, 5, 12, 0.5, 7), box(4.25, 0, 5.25, 5.75, 1.5, 6.75), box(4, 0, 5, 6, 0.5, 7));
+				case EAST -> Shapes.or(box(5, 2.5, 4, 11, 9.5, 12), box(4, 1.5, 3, 12, 2.5, 13), box(4, 9.5, 3, 12, 10.5, 13), box(9, 10.5, 4, 10, 12.5, 6), box(9, 10.5, 10, 10, 12.5, 12), box(2, 4, 7, 4, 5.5, 9), box(5, 2.5, 3, 12, 9.5, 4),
+						box(5, 2.5, 12, 12, 9.5, 13), box(4, 2.5, 3, 5, 9.5, 13), box(5.25, 0, 10.25, 6.75, 1.5, 11.75), box(5, 0, 10, 7, 0.5, 12), box(5.25, 0, 4.25, 6.75, 1.5, 5.75), box(5, 0, 4, 7, 0.5, 6), box(9.25, 0, 10.25, 10.75, 1.5, 11.75),
+						box(9, 0, 10, 11, 0.5, 12), box(9.25, 0, 4.25, 10.75, 1.5, 5.75), box(9, 0, 4, 11, 0.5, 6));
+				case WEST -> Shapes.or(box(5, 2.5, 4, 11, 9.5, 12), box(4, 1.5, 3, 12, 2.5, 13), box(4, 9.5, 3, 12, 10.5, 13), box(6, 10.5, 10, 7, 12.5, 12), box(6, 10.5, 4, 7, 12.5, 6), box(12, 4, 7, 14, 5.5, 9), box(4, 2.5, 12, 11, 9.5, 13),
+						box(4, 2.5, 3, 11, 9.5, 4), box(11, 2.5, 3, 12, 9.5, 13), box(9.25, 0, 4.25, 10.75, 1.5, 5.75), box(9, 0, 4, 11, 0.5, 6), box(9.25, 0, 10.25, 10.75, 1.5, 11.75), box(9, 0, 10, 11, 0.5, 12), box(5.25, 0, 4.25, 6.75, 1.5, 5.75),
+						box(5, 0, 4, 7, 0.5, 6), box(5.25, 0, 10.25, 6.75, 1.5, 11.75), box(5, 0, 10, 7, 0.5, 12));
 			};
 		}
 		return switch (state.getValue(FACING)) {

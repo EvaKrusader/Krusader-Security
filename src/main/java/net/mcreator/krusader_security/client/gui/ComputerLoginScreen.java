@@ -23,6 +23,7 @@ import net.mcreator.krusader_security.procedures.PcAnim2Procedure;
 import net.mcreator.krusader_security.procedures.PcAnim1Procedure;
 import net.mcreator.krusader_security.procedures.AdspaceThalpProcedure;
 import net.mcreator.krusader_security.procedures.AdspaceTelecomProcedure;
+import net.mcreator.krusader_security.procedures.AdspaceMarbleProcedure;
 import net.mcreator.krusader_security.procedures.AdspaceLazarusProcedure;
 import net.mcreator.krusader_security.network.ComputerLoginButtonMessage;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
@@ -105,6 +106,9 @@ public class ComputerLoginScreen extends AbstractContainerScreen<ComputerLoginMe
 		}
 		if (AdspaceTelecomProcedure.execute(entity)) {
 			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/adspace_telecom.png"), this.leftPos + 118, this.topPos + 89, 0, 0, 120, 36, 120, 36);
+		}
+		if (AdspaceMarbleProcedure.execute(entity)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/adspace_marble.png"), this.leftPos + 118, this.topPos + 89, 0, 0, 120, 36, 120, 36);
 		}
 		RenderSystem.disableBlend();
 	}

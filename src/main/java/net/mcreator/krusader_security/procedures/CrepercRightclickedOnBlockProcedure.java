@@ -30,6 +30,21 @@ public class CrepercRightclickedOnBlockProcedure {
 				}
 			} else if ((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip5 ? blockstate.getValue(_getip5) : -1) == 1) {
 				{
+					int _value = 2;
+					BlockPos _pos = BlockPos.containing(x, y, z);
+					BlockState _bs = world.getBlockState(_pos);
+					if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
+						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
+				}
+				{
+					String _setval = "lazarus";
+					entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.pcAdSpace = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else if ((blockstate.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip8 ? blockstate.getValue(_getip8) : -1) == 2) {
+				{
 					int _value = 0;
 					BlockPos _pos = BlockPos.containing(x, y, z);
 					BlockState _bs = world.getBlockState(_pos);
@@ -37,7 +52,7 @@ public class CrepercRightclickedOnBlockProcedure {
 						world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 				}
 				{
-					String _setval = "test";
+					String _setval = "marble";
 					entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.pcAdSpace = _setval;
 						capability.syncPlayerVariables(entity);

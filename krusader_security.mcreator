@@ -1440,6 +1440,7 @@
       "registry_name": "pc_blockstates",
       "metadata": {
         "files": [
+          "src/main/resources/assets/krusader_security/models/block/pc_blockstates_blockstate_1.json",
           "src/main/resources/assets/krusader_security/models/block/pc_blockstates_blockstate_0.json"
         ]
       },
@@ -1906,8 +1907,77 @@
             "type": "entity"
           }
         ]
+      }
+    },
+    {
+      "name": "AdspaceMarble",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adspace_marble",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/AdspaceMarbleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Computer"
+    },
+    {
+      "name": "AdspaceChooser",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "adspace_chooser",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/AdspaceChooserProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Dev"
+    },
+    {
+      "name": "JammerImprovisedRecipe",
+      "type": "recipe",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "jammer_improvised_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/krusader_security/recipes/jammer_improvised_recipe.json"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "WorldVersion",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "world_version",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/WorldVersionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Dev"
     }
   ],
   "variable_elements": [
@@ -2006,6 +2076,18 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "\"\""
+    },
+    {
+      "name": "whatWorldVersionSession",
+      "type": "number",
+      "scope": "global",
+      "value": "0"
+    },
+    {
+      "name": "whatWorldVersionPlayerLock",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [],
