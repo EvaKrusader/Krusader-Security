@@ -19,5 +19,11 @@
       "trigger": "minecraft:impossible"
     }
   },
+  "rewards": {
+    "experience": 0,
+    "recipes": [
+      "krusader_security:jammer_normal_recipe"
+    ]
+  },
   "parent": "krusader_security:wizard"
 }

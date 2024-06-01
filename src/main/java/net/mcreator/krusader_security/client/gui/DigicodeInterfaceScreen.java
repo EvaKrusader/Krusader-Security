@@ -19,6 +19,11 @@ import net.mcreator.krusader_security.procedures.Screen5StarsProcedure;
 import net.mcreator.krusader_security.procedures.Screen4StarsProcedure;
 import net.mcreator.krusader_security.procedures.Screen3StarsProcedure;
 import net.mcreator.krusader_security.procedures.Screen2StarsProcedure;
+import net.mcreator.krusader_security.procedures.ReturnDigicodeWarningProcedure;
+import net.mcreator.krusader_security.procedures.ReturnDigicodePoisonProcedure;
+import net.mcreator.krusader_security.procedures.ReturnDigicodeNormalProcedure;
+import net.mcreator.krusader_security.procedures.ReturnDigicodeGlowingProcedure;
+import net.mcreator.krusader_security.procedures.ReturnDigicodeFireProcedure;
 import net.mcreator.krusader_security.network.DigicodeInterfaceButtonMessage;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
@@ -70,6 +75,9 @@ public class DigicodeInterfaceScreen extends AbstractContainerScreen<DigicodeInt
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 		guiGraphics.blit(texture, this.leftPos, this.topPos, 0, 0, this.imageWidth, this.imageHeight, this.imageWidth, this.imageHeight);
+		if (ReturnDigicodeNormalProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/digicode_interface.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 182, 160, 182, 160);
+		}
 		if (ScreenGreenProcedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/codegreen.png"), this.leftPos + 7, this.topPos + 7, 0, 0, 168, 28, 168, 28);
 		}
@@ -90,6 +98,18 @@ public class DigicodeInterfaceScreen extends AbstractContainerScreen<DigicodeInt
 		}
 		if (Screen4StarsProcedure.execute(world, x, y, z)) {
 			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/codeblack.png"), this.leftPos + 123, this.topPos + 9, 0, 0, 50, 24, 50, 24);
+		}
+		if (ReturnDigicodeGlowingProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/digicode_interface_glowing.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 182, 160, 182, 160);
+		}
+		if (ReturnDigicodePoisonProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/digicode_interface_poison.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 182, 160, 182, 160);
+		}
+		if (ReturnDigicodeWarningProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/digicode_interface_warning.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 182, 160, 182, 160);
+		}
+		if (ReturnDigicodeFireProcedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/digicode_interface_fire.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 182, 160, 182, 160);
 		}
 
 		guiGraphics.blit(new ResourceLocation("krusader_security:textures/screens/dark0.png"), this.leftPos + 79, this.topPos + 124, 0, 0, 30, 20, 30, 20);

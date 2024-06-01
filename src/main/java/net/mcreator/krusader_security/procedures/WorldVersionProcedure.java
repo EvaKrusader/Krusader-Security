@@ -61,6 +61,7 @@ public class WorldVersionProcedure {
 				bufferedReader.close();
 				json = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 				KrusaderSecurityModVariables.whatWorldVersionSession = (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).whatWorldVersionPlayerLock;
+				KrusaderSecurityModVariables.VersionLockTextSession = (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).VersionLockText;
 				if (KrusaderSecurityModVariables.whatWorldVersionSession == 0) {
 					KrusaderSecurityModVariables.whatWorldVersionSession = new Object() {
 						double convert(String s) {
@@ -79,6 +80,15 @@ public class WorldVersionProcedure {
 							capability.syncPlayerVariables(entity);
 						});
 					}
+					KrusaderSecurityModVariables.VersionLockTextSession = new java.text.DecimalFormat("##.##").format(Math.round(json.get("ver1").getAsDouble())) + "."
+							+ new java.text.DecimalFormat("##.##").format(Math.round(json.get("ver2").getAsDouble())) + "." + new java.text.DecimalFormat("##.##").format(Math.round(json.get("ver3").getAsDouble()));
+					{
+						String _setval = KrusaderSecurityModVariables.VersionLockTextSession;
+						entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.VersionLockText = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
 				}
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -86,8 +96,9 @@ public class WorldVersionProcedure {
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(
-					Component.literal(
-							(new java.text.DecimalFormat("###").format((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).whatWorldVersionPlayerLock))),
+					Component.literal(("This world was made in version [" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).VersionLockText + "].")),
 					false);
+		if (entity instanceof Player _player && !_player.level().isClientSide())
+			_player.displayClientMessage(Component.literal("You may be entitled to a reward for your loyalty."), false);
 	}
 }

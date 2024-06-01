@@ -1,0 +1,31 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:Digicode"
+      },
+      {
+        "value": "CUSTOM:DigicodeWarning"
+      },
+      {
+        "value": "CUSTOM:DigicodePoison"
+      },
+      {
+        "value": "CUSTOM:DigicodeFire"
+      },
+      {
+        "value": "CUSTOM:DigicodeGlowing"
+      }
+    ],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "digicodes",
+    "namespace": "minecraft"
+  }
+}

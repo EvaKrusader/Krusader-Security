@@ -13,7 +13,9 @@
     "announceToChat": true,
     "hideIfNotCompleted": true,
     "rewardLoot": [],
-    "rewardRecipes": [],
+    "rewardRecipes": [
+      "JammerNormalRecipe"
+    ],
     "rewardFunction": "No function",
     "rewardXP": 0,
     "achievementType": "task",

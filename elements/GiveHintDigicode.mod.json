@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "screendeletion",
+    "texture": "hint_magnet",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],

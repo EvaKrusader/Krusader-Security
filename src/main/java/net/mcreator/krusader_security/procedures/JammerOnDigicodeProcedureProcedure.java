@@ -13,14 +13,15 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.Advancement;
 
+import net.mcreator.krusader_security.network.KrusaderSecurityModVariables;
 import net.mcreator.krusader_security.init.KrusaderSecurityModItems;
-import net.mcreator.krusader_security.init.KrusaderSecurityModBlocks;
 import net.mcreator.krusader_security.KrusaderSecurityMod;
 
 import javax.annotation.Nullable;
@@ -56,7 +57,37 @@ public class JammerOnDigicodeProcedureProcedure {
 		String monthsStrings = "";
 		String isJammed = "";
 		ItemStack whatJammer = ItemStack.EMPTY;
-		if (blockstate.getBlock() == KrusaderSecurityModBlocks.DIGICODE.get()) {
+		secondsLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.SECOND))).length();
+		minutesLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MINUTE))).length();
+		hoursLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.HOUR_OF_DAY))).length();
+		dayLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.DAY_OF_MONTH))).length();
+		monthLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MONTH))).length();
+		if (secondsLength == 1) {
+			secondsString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.SECOND));
+		} else if (secondsLength == 2) {
+			secondsString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.SECOND));
+		}
+		if (minutesLength == 1) {
+			minutesString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MINUTE));
+		} else if (minutesLength == 2) {
+			minutesString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MINUTE));
+		}
+		if (hoursLength == 1) {
+			hoursString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
+		} else if (hoursLength == 2) {
+			hoursString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
+		}
+		if (dayLength == 1) {
+			daysString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+		} else if (dayLength == 2) {
+			daysString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
+		}
+		if (monthLength == 1) {
+			monthsStrings = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MONTH) + 1);
+		} else if (monthLength == 2) {
+			monthsStrings = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MONTH) + 1);
+		}
+		if (blockstate.is(BlockTags.create(new ResourceLocation("minecraft:digicodes")))) {
 			if (entity.isShiftKeyDown()) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KrusaderSecurityModItems.JAMMER_IMPROVISED.get()) {
 					whatJammer = new ItemStack(KrusaderSecurityModItems.JAMMER_IMPROVISED.get());
@@ -166,6 +197,17 @@ public class JammerOnDigicodeProcedureProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 						OnButtonVClickedProcedure.execute(world, x, y, z, entity);
+						{
+							double _setval = (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).JammerUses + 1;
+							entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.JammerUses = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+						if ((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).JammerUses > 9) {
+							if (entity instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("krusader_security:jammer_elite_recipe")});
+						}
 						KrusaderSecurityMod.queueServerWork(100, () -> {
 							if (!world.isClientSide()) {
 								BlockPos _bp = BlockPos.containing(x, y, z);
@@ -284,6 +326,8 @@ public class JammerOnDigicodeProcedureProcedure {
 							}
 						}
 					}
+				}
+				if (whatJammer.getItem() == KrusaderSecurityModItems.JAMMER_IMPROVISED.get() || whatJammer.getItem() == KrusaderSecurityModItems.JAMMER_NORMAL.get() || whatJammer.getItem() == KrusaderSecurityModItems.JAMMER_ELITE.get()) {
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -299,36 +343,6 @@ public class JammerOnDigicodeProcedureProcedure {
 							}.getValue(world, BlockPos.containing(x, y, z), "howManyJams") + 1));
 						if (world instanceof Level _level)
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-					}
-					secondsLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.SECOND))).length();
-					minutesLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MINUTE))).length();
-					hoursLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.HOUR_OF_DAY))).length();
-					dayLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.DAY_OF_MONTH))).length();
-					monthLength = (new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MONTH))).length();
-					if (secondsLength == 1) {
-						secondsString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.SECOND));
-					} else if (secondsLength == 2) {
-						secondsString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.SECOND));
-					}
-					if (minutesLength == 1) {
-						minutesString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MINUTE));
-					} else if (minutesLength == 2) {
-						minutesString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MINUTE));
-					}
-					if (hoursLength == 1) {
-						hoursString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
-					} else if (hoursLength == 2) {
-						hoursString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.HOUR_OF_DAY));
-					}
-					if (dayLength == 1) {
-						daysString = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
-					} else if (dayLength == 2) {
-						daysString = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.DAY_OF_MONTH));
-					}
-					if (monthLength == 1) {
-						monthsStrings = "0" + new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MONTH) + 1);
-					} else if (monthLength == 2) {
-						monthsStrings = new java.text.DecimalFormat("##").format(Calendar.getInstance().get(Calendar.MONTH) + 1);
 					}
 					if (!world.isClientSide()) {
 						BlockPos _bp = BlockPos.containing(x, y, z);

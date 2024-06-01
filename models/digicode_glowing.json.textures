@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen",
+        "body": "digicode_body_glowing"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "parent": "krusader_security:custom/digicode_warning",
+  "textures": {
+    "all": "krusader_security:block/digicode_body_warning",
+    "particle": "krusader_security:block/digicode_body_warning",
+    "buttons": "krusader_security:block/digicode_buttons",
+    "screen": "krusader_security:block/digicode_screen_red4",
+    "body": "krusader_security:block/digicode_body_warning"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -24,6 +24,7 @@ public class KrusaderSecurityModTabs {
 
 		if (tabData.getTabKey() == CreativeModeTabs.REDSTONE_BLOCKS) {
 			tabData.accept(KrusaderSecurityModBlocks.DIGICODE.get().asItem());
+			tabData.accept(KrusaderSecurityModBlocks.DIGICODE_WARNING.get().asItem());
 			tabData.accept(KrusaderSecurityModItems.ONE_TIME_PASSCODE_CHANGE.get());
 			tabData.accept(KrusaderSecurityModItems.WRENCH.get());
 			tabData.accept(KrusaderSecurityModItems.GIVE_HINT_DIGICODE.get());
@@ -34,6 +35,13 @@ public class KrusaderSecurityModTabs {
 			tabData.accept(KrusaderSecurityModItems.JAMMER_IMPROVISED.get());
 			tabData.accept(KrusaderSecurityModItems.JAMMER_NORMAL.get());
 			tabData.accept(KrusaderSecurityModItems.JAMMER_ELITE.get());
+			tabData.accept(KrusaderSecurityModItems.WARNING_TAPE.get());
+			tabData.accept(KrusaderSecurityModBlocks.DIGICODE_POISON.get().asItem());
+			tabData.accept(KrusaderSecurityModItems.POISON_GEL.get());
+			tabData.accept(KrusaderSecurityModBlocks.DIGICODE_FIRE.get().asItem());
+			tabData.accept(KrusaderSecurityModBlocks.DIGICODE_GLOWING.get().asItem());
+			tabData.accept(KrusaderSecurityModItems.GLOWING_PAINT.get());
+			tabData.accept(KrusaderSecurityModItems.SPICY_POWDER.get());
 		}
 	}
 }

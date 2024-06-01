@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "This Elite Jammer will jam Digicodes 99% of the time."
+        "§7This Elite Jammer will jam Digicodes 99% of the time."
       ]
     },
     "glowCondition": {

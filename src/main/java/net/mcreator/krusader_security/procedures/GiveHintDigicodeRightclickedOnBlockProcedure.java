@@ -8,10 +8,10 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.BlockPos;
-
-import net.mcreator.krusader_security.init.KrusaderSecurityModBlocks;
 
 import java.util.Calendar;
 
@@ -34,7 +34,7 @@ public class GiveHintDigicodeRightclickedOnBlockProcedure {
 		String monthsStrings = "";
 		String yearsString = "";
 		String asterisk = "";
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == KrusaderSecurityModBlocks.DIGICODE.get()) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).is(BlockTags.create(new ResourceLocation("minecraft:digicodes")))) {
 			if (entity.isShiftKeyDown()) {
 				randomDigit = Mth.nextInt(RandomSource.create(), 1, (int) (new Object() {
 					public String getValue(LevelAccessor world, BlockPos pos, String tag) {

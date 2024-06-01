@@ -1,0 +1,11 @@
+{
+  "parent": "krusader_security:custom/digicode_glowing",
+  "textures": {
+    "all": "krusader_security:block/digicode_body_glowing",
+    "particle": "krusader_security:block/digicode_body_glowing",
+    "buttons": "krusader_security:block/digicode_buttons",
+    "screen": "krusader_security:block/digicode_screen",
+    "body": "krusader_security:block/digicode_body_glowing"
+  },
+  "render_type": "cutout_mipped"
+}

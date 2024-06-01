@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "krusader_security:digicode",
+    "krusader_security:digicode_warning",
+    "krusader_security:digicode_poison",
+    "krusader_security:digicode_fire",
+    "krusader_security:digicode_glowing"
+  ]
+}

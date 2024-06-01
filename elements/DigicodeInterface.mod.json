@@ -13,6 +13,18 @@
       {
         "type": "image",
         "data": {
+          "image": "digicode_interface.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnDigicodeNormal"
+          },
+          "x": 123,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
           "image": "codegreen.png",
           "use1Xscale": true,
           "displayCondition": {
@@ -92,6 +104,54 @@
           },
           "x": 246,
           "y": 49
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "digicode_interface_glowing.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnDigicodeGlowing"
+          },
+          "x": 123,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "digicode_interface_poison.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnDigicodePoison"
+          },
+          "x": 123,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "digicode_interface_warning.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnDigicodeWarning"
+          },
+          "x": 123,
+          "y": 40
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "digicode_interface_fire.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "ReturnDigicodeFire"
+          },
+          "x": 123,
+          "y": 40
         }
       },
       {

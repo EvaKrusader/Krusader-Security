@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [
-        "This Jammer will jam Digicodes 50% of the time."
+        "§7This Jammer will jam Digicodes 50% of the time."
       ]
     },
     "glowCondition": {

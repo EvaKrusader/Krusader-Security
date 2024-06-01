@@ -32,6 +32,7 @@ import java.util.function.Supplier;
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class KrusaderSecurityModVariables {
 	public static double whatWorldVersionSession = 0;
+	public static String VersionLockTextSession = "\"\"";
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
@@ -83,6 +84,8 @@ public class KrusaderSecurityModVariables {
 			clone.whatPcAnim = original.whatPcAnim;
 			clone.pcAdSpace = original.pcAdSpace;
 			clone.whatWorldVersionPlayerLock = original.whatWorldVersionPlayerLock;
+			clone.VersionLockText = original.VersionLockText;
+			clone.JammerUses = original.JammerUses;
 			if (!event.isWasDeath()) {
 				clone.isLoggedIn = original.isLoggedIn;
 				clone.sendOutMessage = original.sendOutMessage;
@@ -131,13 +134,15 @@ public class KrusaderSecurityModVariables {
 		public boolean sendDownloadLink = false;
 		public double ver1 = 0;
 		public double ver2 = 0;
-		public double ver3 = 0;
-		public double nextDateNum = 0;
+		public double ver3 = 1.0;
+		public double nextDateNum = 0.0;
 		public double currentDateNum = 0;
 		public double login_anim = 0.0;
 		public double whatPcAnim = 0.0;
 		public String pcAdSpace = "\"\"";
 		public double whatWorldVersionPlayerLock = 0;
+		public String VersionLockText = "\"\"";
+		public double JammerUses = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -163,6 +168,8 @@ public class KrusaderSecurityModVariables {
 			nbt.putDouble("whatPcAnim", whatPcAnim);
 			nbt.putString("pcAdSpace", pcAdSpace);
 			nbt.putDouble("whatWorldVersionPlayerLock", whatWorldVersionPlayerLock);
+			nbt.putString("VersionLockText", VersionLockText);
+			nbt.putDouble("JammerUses", JammerUses);
 			return nbt;
 		}
 
@@ -185,6 +192,8 @@ public class KrusaderSecurityModVariables {
 			whatPcAnim = nbt.getDouble("whatPcAnim");
 			pcAdSpace = nbt.getString("pcAdSpace");
 			whatWorldVersionPlayerLock = nbt.getDouble("whatWorldVersionPlayerLock");
+			VersionLockText = nbt.getString("VersionLockText");
+			JammerUses = nbt.getDouble("JammerUses");
 		}
 	}
 
@@ -226,6 +235,8 @@ public class KrusaderSecurityModVariables {
 					variables.whatPcAnim = message.data.whatPcAnim;
 					variables.pcAdSpace = message.data.pcAdSpace;
 					variables.whatWorldVersionPlayerLock = message.data.whatWorldVersionPlayerLock;
+					variables.VersionLockText = message.data.VersionLockText;
+					variables.JammerUses = message.data.JammerUses;
 				}
 			});
 			context.setPacketHandled(true);

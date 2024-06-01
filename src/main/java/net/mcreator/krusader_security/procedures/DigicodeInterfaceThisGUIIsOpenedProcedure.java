@@ -7,6 +7,8 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.krusader_security.KrusaderSecurityMod;
+
 public class DigicodeInterfaceThisGUIIsOpenedProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
 		if (!world.isClientSide()) {
@@ -52,5 +54,16 @@ public class DigicodeInterfaceThisGUIIsOpenedProcedure {
 			if (_bs.getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _integerProp && _integerProp.getPossibleValues().contains(_value))
 				world.setBlock(_pos, _bs.setValue(_integerProp, _value), 3);
 		}
+		KrusaderSecurityMod.queueServerWork((int) (20 * 60), () -> {
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putDouble("howManyTries", 0);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+		});
 	}
 }

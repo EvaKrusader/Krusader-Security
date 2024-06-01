@@ -1,0 +1,108 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen",
+        "body": "digicode_body_warning"
+      },
+      "name": "default"
+    },
+    "star1": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen1",
+        "body": "digicode_body_warning"
+      },
+      "name": "star1"
+    },
+    "star2": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen2",
+        "body": "digicode_body_warning"
+      },
+      "name": "star2"
+    },
+    "star3": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen3",
+        "body": "digicode_body_warning"
+      },
+      "name": "star3"
+    },
+    "star4": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen4",
+        "body": "digicode_body_warning"
+      },
+      "name": "star4"
+    },
+    "green1": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_green1",
+        "body": "digicode_body_warning"
+      },
+      "name": "green1"
+    },
+    "green2": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_green2",
+        "body": "digicode_body_warning"
+      },
+      "name": "green2"
+    },
+    "green3": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_green3",
+        "body": "digicode_body_warning"
+      },
+      "name": "green3"
+    },
+    "green4": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_green4",
+        "body": "digicode_body_warning"
+      },
+      "name": "green4"
+    },
+    "red1": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_red1",
+        "body": "digicode_body_warning"
+      },
+      "name": "red1"
+    },
+    "red2": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_red2",
+        "body": "digicode_body_warning"
+      },
+      "name": "red2"
+    },
+    "red3": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_red3",
+        "body": "digicode_body_warning"
+      },
+      "name": "red3"
+    },
+    "red4": {
+      "map": {
+        "buttons": "digicode_buttons",
+        "screen": "digicode_screen_red4",
+        "body": "digicode_body_warning"
+      },
+      "name": "red4"
+    }
+  }
+}

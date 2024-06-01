@@ -18,6 +18,6 @@ public class JammerEliteItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("This Elite Jammer will jam Digicodes 99% of the time."));
+		list.add(Component.literal("\u00A77This Elite Jammer will jam Digicodes 99% of the time."));
 	}
 }
