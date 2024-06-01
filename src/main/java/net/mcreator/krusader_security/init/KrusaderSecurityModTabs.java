@@ -42,6 +42,7 @@ public class KrusaderSecurityModTabs {
 			tabData.accept(KrusaderSecurityModBlocks.DIGICODE_GLOWING.get().asItem());
 			tabData.accept(KrusaderSecurityModItems.GLOWING_PAINT.get());
 			tabData.accept(KrusaderSecurityModItems.SPICY_POWDER.get());
+			tabData.accept(KrusaderSecurityModBlocks.DIGICODE_RELAYER.get().asItem());
 		}
 	}
 }

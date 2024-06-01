@@ -47,6 +47,7 @@ public class KrusaderSecurityModItems {
 	public static final RegistryObject<Item> DIGICODE_GLOWING = block(KrusaderSecurityModBlocks.DIGICODE_GLOWING);
 	public static final RegistryObject<Item> GLOWING_PAINT = REGISTRY.register("glowing_paint", () -> new GlowingPaintItem());
 	public static final RegistryObject<Item> SPICY_POWDER = REGISTRY.register("spicy_powder", () -> new SpicyPowderItem());
+	public static final RegistryObject<Item> DIGICODE_RELAYER = block(KrusaderSecurityModBlocks.DIGICODE_RELAYER);
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -1,11 +1,11 @@
 {
-  "parent": "krusader_security:custom/digicode_poison",
+  "parent": "krusader_security:custom/digicode_fire",
   "textures": {
-    "all": "krusader_security:block/digicode_body_poison",
-    "particle": "krusader_security:block/digicode_body_warning",
+    "all": "krusader_security:block/digicode_body_fire",
+    "particle": "krusader_security:block/digicode_body_fire",
     "buttons": "krusader_security:block/digicode_buttons",
     "screen": "krusader_security:block/digicode_screen_red3",
-    "body": "krusader_security:block/digicode_body_poison"
+    "body": "krusader_security:block/digicode_body_fire"
   },
   "render_type": "cutout_mipped"
 }

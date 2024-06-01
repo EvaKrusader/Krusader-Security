@@ -12,6 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 import net.mcreator.krusader_security.block.TerminalBlock;
 import net.mcreator.krusader_security.block.DigicodeWarningBlock;
+import net.mcreator.krusader_security.block.DigicodeRelayerBlock;
 import net.mcreator.krusader_security.block.DigicodePoisonBlock;
 import net.mcreator.krusader_security.block.DigicodeGlowingBlock;
 import net.mcreator.krusader_security.block.DigicodeFireBlock;
@@ -28,4 +29,5 @@ public class KrusaderSecurityModBlocks {
 	public static final RegistryObject<Block> DIGICODE_POISON = REGISTRY.register("digicode_poison", () -> new DigicodePoisonBlock());
 	public static final RegistryObject<Block> DIGICODE_FIRE = REGISTRY.register("digicode_fire", () -> new DigicodeFireBlock());
 	public static final RegistryObject<Block> DIGICODE_GLOWING = REGISTRY.register("digicode_glowing", () -> new DigicodeGlowingBlock());
+	public static final RegistryObject<Block> DIGICODE_RELAYER = REGISTRY.register("digicode_relayer", () -> new DigicodeRelayerBlock());
 }

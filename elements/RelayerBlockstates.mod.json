@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "blockstates",
+  "definition": {
+    "block": "DigicodeRelayer",
+    "blockstateList": [
+      {
+        "texture": "digicode_relay_powered",
+        "textureTop": "digicode_relay_powered",
+        "textureLeft": "digicode_relay_powered",
+        "textureFront": "digicode_relay_powered",
+        "textureRight": "digicode_relay_powered",
+        "textureBack": "digicode_relay_powered",
+        "particleTexture": "",
+        "renderType": 4,
+        "customModelName": "Single texture",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

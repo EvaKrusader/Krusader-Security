@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "krusader_security:block/digicode_relay",
+    "up": "krusader_security:block/digicode_relay",
+    "north": "krusader_security:block/digicode_relay",
+    "east": "krusader_security:block/digicode_relay",
+    "south": "krusader_security:block/digicode_relay",
+    "west": "krusader_security:block/digicode_relay",
+    "particle": "krusader_security:block/digicode_relay"
+  },
+  "render_type": "solid"
+}

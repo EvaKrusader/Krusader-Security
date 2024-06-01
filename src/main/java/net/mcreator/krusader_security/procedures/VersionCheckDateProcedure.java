@@ -28,12 +28,6 @@ public class VersionCheckDateProcedure {
 			return;
 		com.google.gson.JsonObject json = new com.google.gson.JsonObject();
 		File file = new File("");
-		String p1 = "";
-		String p2 = "";
-		String tdP2 = "";
-		String tdP1 = "";
-		String url = "";
-		String ANextDate = "";
 		double year = 0;
 		double len3 = 0;
 		double len1 = 0;
@@ -42,11 +36,19 @@ public class VersionCheckDateProcedure {
 		double tdLen2 = 0;
 		double tdLen1 = 0;
 		double day = 0;
+		String p1 = "";
+		String p2 = "";
+		String tdP2 = "";
+		String tdP1 = "";
+		String url = "";
+		String ANextDate = "";
+		String modName = "";
 		day = Calendar.getInstance().get(Calendar.DAY_OF_MONTH);
 		month = Calendar.getInstance().get(Calendar.MONTH);
 		year = Calendar.getInstance().get(Calendar.YEAR);
 		file = new File(System.getProperty("java.io.tmpdir"), File.separator + "modver.json");
 		url = "https://raw.githubusercontent.com/EvaKrusader/" + "Krusader-Security" + "/master/src/main/modver.json";
+		modName = "-Krusader Security-";
 		try {
 			org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), file, 1000, 1000);
 		} catch (IOException e) {
@@ -150,7 +152,7 @@ public class VersionCheckDateProcedure {
 							.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).currentDateNum
 							&& (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).sendDownloadLink == false) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal((("The next update of Eva Additions will release on " + "\u00A7a" + ANextDate
+							_player.displayClientMessage(Component.literal(((("The next update of " + modName + " will release on ") + "\u00A7a" + ANextDate
 									+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + "!") + ""
 									+ (" (" + "\u00A7a" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextVersion
 											+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + ")"))),
@@ -158,7 +160,7 @@ public class VersionCheckDateProcedure {
 					} else if ((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextDateNum == (entity
 							.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).currentDateNum) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("" + ("The latest update of Eva Additions released on " + "\u00A7b" + ANextDate + " (today)"
+							_player.displayClientMessage(Component.literal(("" + (("The latest update of " + modName + " released on ") + "\u00A7b" + ANextDate + " (today)"
 									+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + "!"))), false);
 						{
 							boolean _setval = true;
@@ -170,7 +172,7 @@ public class VersionCheckDateProcedure {
 					} else if ((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).currentDateNum > (entity
 							.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextDateNum) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("" + ("The latest update of Eva Additions released on " + "\u00A7c" + ANextDate
+							_player.displayClientMessage(Component.literal(("" + (("The latest update of " + modName + " released on ") + "\u00A7c" + ANextDate
 									+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + "!"))), false);
 						{
 							boolean _setval = true;
@@ -196,8 +198,8 @@ public class VersionCheckDateProcedure {
 								_ent.getServer().getCommands().performPrefixedCommand(
 										new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
 												_ent.getDisplayName(), _ent.level().getServer(), _ent),
-										("tellraw @a {\"text\":\"Click here to download the new version!\",\"underlined\":true,\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"" + "" + json.get("update").getAsString()
-												+ "\"}}"));
+										("tellraw @a {\"text\":\"Click here to download the new version of 'Krusader Security'!\",\"underlined\":true,\"color\":\"green\",\"clickEvent\":{\"action\":\"open_url\",\"value\":\"" + ""
+												+ json.get("update").getAsString() + "\"}}"));
 							}
 						}
 					}

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "krusader_security:block/digicode_relayer"
+    },
+    "blockstate=1": {
+      "model": "krusader_security:block/relayer_blockstates_blockstate_0"
+    }
+  }
+}

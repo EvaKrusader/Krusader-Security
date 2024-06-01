@@ -41,10 +41,12 @@ public class WorldVersionProcedure {
 		File file = new File("");
 		double nextVersion = 0;
 		double currentVersion = 0;
-		String url = "";
 		com.google.gson.JsonObject json = new com.google.gson.JsonObject();
+		String url = "";
+		String modName = "";
 		file = new File(System.getProperty("java.io.tmpdir"), File.separator + "modver.json");
 		url = "https://raw.githubusercontent.com/EvaKrusader/" + "Krusader-Security" + "/master/src/main/modver.json";
+		modName = "-Krusader Security-";
 		try {
 			org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), file, 1000, 1000);
 		} catch (IOException e) {
@@ -95,8 +97,8 @@ public class WorldVersionProcedure {
 			}
 		}
 		if (entity instanceof Player _player && !_player.level().isClientSide())
-			_player.displayClientMessage(
-					Component.literal(("This world was made in version [" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).VersionLockText + "].")),
+			_player.displayClientMessage(Component.literal(
+					("This world was made in version [" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).VersionLockText + ("] of " + modName + "."))),
 					false);
 		if (entity instanceof Player _player && !_player.level().isClientSide())
 			_player.displayClientMessage(Component.literal("You may be entitled to a reward for your loyalty."), false);

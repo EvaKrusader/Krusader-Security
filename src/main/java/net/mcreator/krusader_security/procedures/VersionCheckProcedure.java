@@ -41,8 +41,9 @@ public class VersionCheckProcedure {
 		File file = new File("");
 		double nextVersion = 0;
 		double currentVersion = 0;
-		String url = "";
 		com.google.gson.JsonObject json = new com.google.gson.JsonObject();
+		String url = "";
+		String modName = "";
 		{
 			String _setval = (new java.text.DecimalFormat("#").format((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ver1) + ".") + ""
 					+ (new java.text.DecimalFormat("#").format((entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ver2) + ".")
@@ -54,6 +55,7 @@ public class VersionCheckProcedure {
 		}
 		file = new File(System.getProperty("java.io.tmpdir"), File.separator + "modver.json");
 		url = "https://raw.githubusercontent.com/EvaKrusader/" + "Krusader-Security" + "/master/src/main/modver.json";
+		modName = "-Krusader Security-";
 		try {
 			org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), file, 1000, 1000);
 		} catch (IOException e) {
@@ -99,16 +101,20 @@ public class VersionCheckProcedure {
 				}.convert(Math.round(json.get("ver1").getAsDouble()) + "" + Math.round(json.get("ver2").getAsDouble()) + Math.round(json.get("ver3").getAsDouble()));
 				if (nextVersion > currentVersion) {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal("This version of the mod is outdated."), false);
+						_player.displayClientMessage(
+								Component.literal(("This version of " + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).modName + " is outdated.")),
+								false);
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(Component
 								.literal(("You are using the version " + "\u00A7c" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).currentVersion
-										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + " of this mod.")),
+										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset
+										+ (" of " + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).modName + "."))),
 								false);
 					if (entity instanceof Player _player && !_player.level().isClientSide())
 						_player.displayClientMessage(
 								Component.literal(("The version " + "\u00A7a" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextVersion
-										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + " of this mod is out!")),
+										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset
+										+ (" of " + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).modName + " is out!"))),
 								false);
 					{
 						boolean _setval = true;
@@ -126,17 +132,22 @@ public class VersionCheckProcedure {
 					}
 				} else if (nextVersion == currentVersion) {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You are using the right version of this mod! (" + "\u00A7b"
-								+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextVersion
-								+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + ")")), false);
+						_player.displayClientMessage(Component
+								.literal((("You are using the right version of " + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).modName + "! (")
+										+ "\u00A7b" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextVersion
+										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + ")")),
+								false);
 				} else if (nextVersion < currentVersion) {
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(("You are somehow using an unreleased version of this mod (\u00A7e"
-								+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).currentVersion
-								+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + ")")), false);
+						_player.displayClientMessage(Component
+								.literal((("You are somehow using an unreleased version of " + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).modName
+										+ " (\u00A7e") + "" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).currentVersion
+										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + ")")),
+								false);
 					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal(
-								("The current version of this mod is " + "\u00A7a" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextVersion
+						_player.displayClientMessage(
+								Component.literal((("The current version of " + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).modName + " is ")
+										+ "\u00A7a" + (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).nextVersion
 										+ (entity.getCapability(KrusaderSecurityModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KrusaderSecurityModVariables.PlayerVariables())).ItemColorReset + ".")),
 								false);
 					{

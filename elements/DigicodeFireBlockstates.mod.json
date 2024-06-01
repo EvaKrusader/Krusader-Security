@@ -5,7 +5,7 @@
     "block": "DigicodeFire",
     "blockstateList": [
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -13,7 +13,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:star1",
+        "customModelName": "digicode_fire:star1",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -190,7 +190,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -198,7 +198,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:star2",
+        "customModelName": "digicode_fire:star2",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -375,7 +375,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -383,7 +383,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:star3",
+        "customModelName": "digicode_fire:star3",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -560,7 +560,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -568,7 +568,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:star4",
+        "customModelName": "digicode_fire:star4",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -745,7 +745,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -753,7 +753,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:green1",
+        "customModelName": "digicode_fire:green1",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -930,7 +930,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -938,7 +938,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:green2",
+        "customModelName": "digicode_fire:green2",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -1115,7 +1115,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -1123,7 +1123,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:green3",
+        "customModelName": "digicode_fire:green3",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -1300,7 +1300,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -1308,7 +1308,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:green4",
+        "customModelName": "digicode_fire:green4",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -1485,7 +1485,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -1493,7 +1493,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:red1",
+        "customModelName": "digicode_fire:red1",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -1670,7 +1670,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -1678,7 +1678,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:red2",
+        "customModelName": "digicode_fire:red2",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -1855,7 +1855,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -1863,7 +1863,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:red3",
+        "customModelName": "digicode_fire:red3",
         "luminance": 0,
         "boundingBoxes": [
           {
@@ -2040,7 +2040,7 @@
         ]
       },
       {
-        "texture": "digicode_body_poison",
+        "texture": "digicode_body_fire",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
@@ -2048,7 +2048,7 @@
         "textureBack": "",
         "particleTexture": "",
         "renderType": 2,
-        "customModelName": "digicode_poison:red4",
+        "customModelName": "digicode_fire:red4",
         "luminance": 0,
         "boundingBoxes": [
           {

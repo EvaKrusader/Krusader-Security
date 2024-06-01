@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "krusader_security:block/digicode_relay_powered",
+    "particle": "krusader_security:block/digicode_relay"
+  },
+  "render_type": "solid"
+}

@@ -2579,6 +2579,149 @@
         ]
       },
       "path": "~/Digicode/Jammer"
+    },
+    {
+      "name": "DigicodeRelayerEmittedRedstonePower",
+      "type": "procedure",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_relayer_emitted_redstone_power",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeRelayerEmittedRedstonePowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeRelayer",
+      "type": "block",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_relayer",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/item/digicode_relayer.json",
+          "src/main/resources/assets/krusader_security/blockstates/digicode_relayer.json",
+          "src/main/resources/assets/krusader_security/models/block/digicode_relayer.json",
+          "src/main/java/net/mcreator/krusader_security/block/DigicodeRelayerBlock.java"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeRelayerUpdateTick",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_relayer_update_tick",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeRelayerUpdateTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeRelayerNeighbourBlockChanges",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_relayer_neighbour_block_changes",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/krusader_security/procedures/DigicodeRelayerNeighbourBlockChangesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "RelayerBlockstates",
+      "type": "blockstates",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "relayer_blockstates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/krusader_security/models/block/relayer_blockstates_blockstate_0.json"
+        ]
+      },
+      "path": "~/Digicode"
+    },
+    {
+      "name": "DigicodeRecipe",
+      "type": "recipe",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "digicode_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/krusader_security/recipes/digicode_recipe.json"
+        ]
+      },
+      "path": "~/Digicode"
     }
   ],
   "variable_elements": [
@@ -2707,6 +2850,12 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "modName",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "Krusader Security"
     }
   ],
   "sound_elements": [],
@@ -2804,6 +2953,7 @@
       "item.krusader_security.give_hint_digicode": "Spell of Insight",
       "item.krusader_security.jammer_improvised": "Improvised Jammer",
       "gui.krusader_security.pc_password_reset.button_return": "Return",
+      "block.krusader_security.digicode_relayer": "Digicode Relayer",
       "gui.gensec.digicode_interface.button_5": "5",
       "gui.krusader_security.digicode_interface.button_7": "7",
       "gui.gensec.digicode_interface.button_6": "6",

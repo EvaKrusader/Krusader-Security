@@ -86,6 +86,7 @@ public class KrusaderSecurityModVariables {
 			clone.whatWorldVersionPlayerLock = original.whatWorldVersionPlayerLock;
 			clone.VersionLockText = original.VersionLockText;
 			clone.JammerUses = original.JammerUses;
+			clone.modName = original.modName;
 			if (!event.isWasDeath()) {
 				clone.isLoggedIn = original.isLoggedIn;
 				clone.sendOutMessage = original.sendOutMessage;
@@ -143,6 +144,7 @@ public class KrusaderSecurityModVariables {
 		public double whatWorldVersionPlayerLock = 0;
 		public String VersionLockText = "\"\"";
 		public double JammerUses = 0;
+		public String modName = "Krusader Security";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -170,6 +172,7 @@ public class KrusaderSecurityModVariables {
 			nbt.putDouble("whatWorldVersionPlayerLock", whatWorldVersionPlayerLock);
 			nbt.putString("VersionLockText", VersionLockText);
 			nbt.putDouble("JammerUses", JammerUses);
+			nbt.putString("modName", modName);
 			return nbt;
 		}
 
@@ -194,6 +197,7 @@ public class KrusaderSecurityModVariables {
 			whatWorldVersionPlayerLock = nbt.getDouble("whatWorldVersionPlayerLock");
 			VersionLockText = nbt.getString("VersionLockText");
 			JammerUses = nbt.getDouble("JammerUses");
+			modName = nbt.getString("modName");
 		}
 	}
 
@@ -237,6 +241,7 @@ public class KrusaderSecurityModVariables {
 					variables.whatWorldVersionPlayerLock = message.data.whatWorldVersionPlayerLock;
 					variables.VersionLockText = message.data.VersionLockText;
 					variables.JammerUses = message.data.JammerUses;
+					variables.modName = message.data.modName;
 				}
 			});
 			context.setPacketHandled(true);

@@ -91,6 +91,7 @@
   "item.krusader_security.give_hint_digicode": "Spell of Insight",
   "item.krusader_security.jammer_improvised": "Improvised Jammer",
   "gui.krusader_security.pc_password_reset.button_return": "Return",
+  "block.krusader_security.digicode_relayer": "Digicode Relayer",
   "gui.gensec.digicode_interface.button_5": "5",
   "gui.krusader_security.digicode_interface.button_7": "7",
   "gui.gensec.digicode_interface.button_6": "6",
